@@ -1,0 +1,6 @@
+@RecyRoute_HostAddress = http://localhost:5252
+
+GET {{RecyRoute_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
