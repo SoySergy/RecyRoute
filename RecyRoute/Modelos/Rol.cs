@@ -1,9 +1,13 @@
-﻿namespace RecyRoute.NewFolder
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RecyRoute.NewFolder
 {
     public class Rol
     {
-        public int IdRol { get; set; }
+        [Key]
+        public Guid IdRol { get; set; } = Guid.NewGuid();
         public string NombreRol { get; set; }
         public string Descripcion { get; set; }
+        public ICollection<Usuarios> Usuarios { get; set; }
     }
 }
