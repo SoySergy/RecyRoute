@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RecyRoute.NewFolder
 {
-    public class Usuarios:Rol
+    public class Usuario:Rol
     {
         [Key]
         public Guid IdUsuario { get; set; }
