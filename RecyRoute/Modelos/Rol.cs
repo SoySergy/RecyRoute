@@ -8,6 +8,6 @@ namespace RecyRoute.NewFolder
         public Guid IdRol { get; set; } = Guid.NewGuid();
         public string NombreRol { get; set; }
         public string Descripcion { get; set; }
-        public ICollection<Usuarios> Usuarios { get; set; }
+        public ICollection<Usuario> Usuarios { get; set; }
     }
 }
