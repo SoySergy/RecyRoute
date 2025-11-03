@@ -5,14 +5,17 @@ namespace RecyRoute.NewFolder
 {
     public class Usuario:Rol
     {
-        [Key]
+        [Key] //se define la llave primaria
         public Guid IdUsuario { get; set; }
         = Guid.NewGuid();
+
+        //se definen las llaves foraneas
         [ForeignKey("Roles")]
         public Guid IdRol { get; set; }
         [ForeignKey("TiposDocumentos")]
         public Guid IdTipoDoc { get; set; }
 
+        //se definen los atributos restantes de la clase 
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Correo { get; set; }
