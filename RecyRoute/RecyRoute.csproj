@@ -7,12 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Frontend\Pagina\**" />
+    <Content Remove="Frontend\Pagina\**" />
+    <EmbeddedResource Remove="Frontend\Pagina\**" />
+    <None Remove="Frontend\Pagina\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Frontend\" />
     <Folder Include="Backend\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Modelos\" />
     <Folder Include="Contexto\" />
   </ItemGroup>
