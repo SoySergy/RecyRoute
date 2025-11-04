@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--Titulo de la pagina-->
+    <title>RecyRoute</title>
+    <!--Favicon-->
+    <link rel="icon" href="../Recursos/Iconos/Head/logorecyroute.svg" />
+    <!--CSS-->
+    <link rel="stylesheet" href="../Recursos/Css/reset.css">
+    <link rel="stylesheet" href="../Recursos/Css/base.css">
+    <link rel="stylesheet" href="../Recursos/Css/iniciarsesion.css"/>
+</head>
+<body>
+    <!--Contenedor Principal-->
+    <main class="ContenedorLogin">
+        <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
+        <!--Tarjeta de Login-->
+        <div class="TarjetaLogin">
+            <!--Logo Principal-->
+            <!--Titulo del Formulario-->
+            <h2 class="TituloFormulario">Iniciar Sesión</h2>
+
+            <!--Formulario de Login-->
+            <form class="FormularioLogin">
+                <!--Campo de Correo Electrónico-->
+                <input type="email"
+                       class="InputLogin"
+                       placeholder="Correo electrónico"
+                       required />
+
+                <!--Campo de Contraseña-->
+                <input type="password"
+                       class="InputLogin"
+                       placeholder="Contraseña"
+                       required />
+
+                <!--Botón de Iniciar Sesión-->
+                <button type="submit" class="BotonIniciarSesion">
+                    Iniciar Sesión
+                </button>
+
+                <!--Link de Olvidaste Contraseña-->
+                <a href="recuperarcontrasena.html" class="LinkOlvidasteContrasena">
+                    ¿Olvidaste tu contraseña?
+                </a>
+
+                <!--Separador-->
+                <div class="SeparadorLogin"></div>
+
+                <!--Botón de Registrarse-->
+                <button type="button"
+                        class="BotonRegistrarse"
+                        onclick="location.href='registro.html'">
+                    Registrarse
+                </button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

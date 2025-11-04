@@ -1,0 +1,232 @@
+﻿/*===== CONTENEDOR PRINCIPAL =====*/
+.ContenedorRegistro {
+    display: flex; /*Usa flexbox para centrar*/
+    flex-direction: column; /*Elementos en columna*/
+    justify-content: center; /*Centra verticalmente*/
+    align-items: center; /*Centra horizontalmente*/
+    min-height: 100vh; /*Altura mínima de toda la pantalla*/
+    padding: 20px; /*Espacio interno*/
+}
+
+/*===== LOGO RECYROUTE =====*/
+.LogoRecyRoute {
+    font-family: Poppins, Arial, sans-serif; /*Fuente principal*/
+    font-style: italic; /*Estilo cursiva*/
+    font-size: 46px; /*Tamaño de letra*/
+    font-weight: 700; /*Grosor del texto*/
+    color: #00A63E; /*Color verde de la marca*/
+    margin-bottom: 15px; /*Espacio debajo del logo*/
+    text-align: center; /*Centra el texto*/
+}
+
+/*===== TARJETA DE REGISTRO =====*/
+.TarjetaRegistro {
+    background-color: #d4f5e3; /*Fondo verde claro*/
+    border: 2px solid #00A63E; /*Borde verde*/
+    border-radius: 16px; /*Esquinas redondeadas*/
+    padding: 33px; /*Espacio interno*/
+    width: 100%; /*Ancho completo*/
+    max-width: 580px; /*Ancho máximo*/
+    box-shadow: 0 4px 10px rgba(0, 166, 62, 0.1); /*Sombra suave verde*/
+}
+
+/*===== TITULO DEL FORMULARIO =====*/
+.TituloFormulario {
+    font-family: Poppins, Arial, sans-serif; /*Fuente principal*/
+    font-size: 24px; /*Tamaño de letra*/
+    font-weight: 600; /*Grosor medio-alto*/
+    color: #101828; /*Color gris oscuro*/
+    text-align: center; /*Centra el texto*/
+    margin-bottom: 30px; /*Espacio debajo del título*/
+}
+
+/*===== FORMULARIO =====*/
+.FormularioRegistro {
+    display: flex; /*Usa flexbox*/
+    flex-direction: column; /*Elementos en columna*/
+    gap: 20px; /*Espacio entre elementos*/
+}
+
+/*===== FILA DE CAMPOS =====*/
+.FilaCampos {
+    display: grid; /*Usa grid para dos columnas*/
+    grid-template-columns: 1fr 1fr; /*Dos columnas iguales*/
+    gap: 15px; /*Espacio entre campos*/
+}
+
+/*===== CAMPO DE FORMULARIO =====*/
+.CampoFormulario {
+    width: 100%; /*Ancho completo*/
+}
+
+/*===== INPUTS DE REGISTRO =====*/
+.InputRegistro {
+    width: 100%; /*Ancho completo*/
+    padding: 14px 16px; /*Espacio interno*/
+    font-family: Arial, sans-serif; /*Fuente para inputs*/
+    font-size: 15px; /*Tamaño de letra*/
+    color: #101828; /*Color del texto*/
+    background-color: #ffffff; /*Fondo blanco*/
+    border: 1px solid #D0D5DD; /*Borde gris claro*/
+    border-radius: 8px; /*Esquinas redondeadas*/
+    outline: none; /*Elimina borde por defecto al hacer focus*/
+    transition: border-color 0.3s ease; /*Transición suave del borde*/
+    box-sizing: border-box; /*Incluye padding en el ancho total*/
+}
+/* Select que hereda estilos de .InputRegistro y muestra flecha */
+select.InputRegistro {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path fill='%2398A2B3' d='M0 0l5 6 5-6z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 10px 6px;
+    padding-right: 44px;  deja espacio para la flecha 
+}
+
+@media (max-width:480px) {
+    select.InputRegistro {
+        padding-right: 36px;
+    }
+}
+
+
+    /*Efecto focus en inputs*/
+    .InputRegistro:focus {
+        border-color: #00A63E; /*Borde verde al hacer focus*/
+        box-shadow: 0 0 0 3px rgba(0, 166, 62, 0.1); /*Sombra verde suave*/
+    }
+
+    /*Estilo del placeholder*/
+    .InputRegistro::placeholder {
+        color: #98A2B3; /*Color gris claro*/
+    }
+
+/*===== SECCIÓN DE SELECCIÓN DE ROL =====*/
+.SeccionRol {
+    margin: 10px 0; /*Espacio arriba y abajo*/
+}
+
+.TituloSeccion {
+    font-family: Poppins, Arial, sans-serif; /*Fuente principal*/
+    font-size: 16px; /*Tamaño de letra*/
+    font-weight: 600; /*Grosor medio-alto*/
+    color: #101828; /*Color gris oscuro*/
+    text-align: center; /*Centra el texto*/
+    margin-bottom: 15px; /*Espacio debajo*/
+}
+
+/*===== CONTENEDOR DE OPCIONES DE ROL =====*/
+.ContenedorRoles {
+    display: grid; /*Usa grid*/
+    grid-template-columns: 1fr 1fr; /*Dos columnas iguales*/
+    gap: 15px; /*Espacio entre opciones*/
+}
+
+/*===== OPCIÓN DE ROL =====*/
+.OpcionRol {
+    position: relative; /*Posición relativa para el input oculto*/
+    display: flex;
+}
+
+.InputRol {
+    position: absolute; /*Posición absoluta*/
+    opacity: 0; /*Invisible*/
+    cursor: pointer; /*Cursor de manita*/
+}
+
+.EtiquetaRol {
+    display: flex; /*Usa flexbox*/
+    align-items: center; /*Centra verticalmente*/
+    justify-content: center; /*Centra horizontalmente*/
+    padding: 14px 16px; /*Espacio interno*/
+    background-color: #ffffff; /*Fondo blanco*/
+    border: 2px solid #D0D5DD; /*Borde gris claro*/
+    border-radius: 8px; /*Esquinas redondeadas*/
+    cursor: pointer; /*Cursor de manita*/
+    transition: all 0.3s ease; /*Transición suave*/
+    font-family: Arial, sans-serif; /*Fuente*/
+    font-size: 14px; /*Tamaño de letra*/
+    color: #101828; /*Color del texto*/
+    font-weight: 500; /*Grosor medio*/
+    text-align: center; /*Centra el texto*/
+    min-height: 68px; /*Altura mínima*/
+}
+
+/*Icono dentro de la etiqueta*/
+.IconoRol {
+    margin-right: 8px; /*Espacio a la derecha del icono*/
+    font-size: 18px; /*Tamaño del icono*/
+}
+
+/*Efecto hover en etiqueta de rol*/
+.EtiquetaRol:hover {
+    border-color: #00A63E; /*Borde verde al pasar el mouse*/
+    background-color: #f0fdf4; /*Fondo verde muy claro*/
+}
+
+/*Estilo cuando el input está seleccionado*/
+.InputRol:checked + .EtiquetaRol {
+    background-color: #00A63E; /*Fondo verde*/
+    border-color: #00A63E; /*Borde verde*/
+    color: #ffffff; /*Texto blanco*/
+    font-weight: 600; /*Grosor alto*/
+}
+
+/*===== BOTÓN REGISTRARSE =====*/
+.BotonRegistrarse {
+    width: 100%; /*Ancho completo*/
+    padding: 16px; /*Espacio interno*/
+    background-color: #00A63E; /*Fondo verde*/
+    color: #ffffff; /*Texto blanco*/
+    font-family: Poppins, Arial, sans-serif; /*Fuente principal*/
+    font-size: 18px; /*Tamaño de letra*/
+    font-weight: 600; /*Grosor medio-alto*/
+    border: none; /*Sin borde*/
+    border-radius: 8px; /*Esquinas redondeadas*/
+    cursor: pointer; /*Cursor de manita*/
+    transition: background-color 0.3s ease, transform 0.2s ease; /*Transición suave*/
+    margin-top: 10px; /*Espacio arriba*/
+}
+
+    /*Efecto hover del botón*/
+    .BotonRegistrarse:hover {
+        background-color: #008a35; /*Verde más oscuro*/
+        transform: translateY(-2px); /*Eleva el botón*/
+    }
+
+    /*Efecto active del botón*/
+    .BotonRegistrarse:active {
+        transform: translateY(0); /*Vuelve a la posición original*/
+    }
+
+/*===== RESPONSIVE - PANTALLAS MEDIANAS =====*/
+@media (max-width: 768px) {
+    .FilaCampos {
+        grid-template-columns: 1fr; /*Una columna en tablets*/
+    }
+
+    .ContenedorRoles {
+        grid-template-columns: 1fr; /*Una columna en tablets*/
+    }
+}
+
+/*===== RESPONSIVE - PANTALLAS PEQUEÑAS =====*/
+@media (max-width: 480px) {
+    .TarjetaRegistro {
+        padding: 30px 20px; /*Reduce padding en móviles*/
+    }
+
+    .LogoRecyRoute {
+        font-size: 36px; /*Logo más pequeño*/
+    }
+
+    .TituloFormulario {
+        font-size: 20px; /*Título más pequeño*/
+    }
+
+    .BotonRegistrarse {
+        font-size: 16px; /*Botón más pequeño*/
+    }
+}
