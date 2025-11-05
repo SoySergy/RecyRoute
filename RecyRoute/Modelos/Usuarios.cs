@@ -20,7 +20,7 @@ namespace RecyRoute.NewFolder
         public string Apellido { get; set; }
         public string Correo { get; set; }
         public string Clave { get; set; }
-        public string Telefono { get; set; }
+        public string Telefono { get; set; }//aaa
         public string Direccion { get; set; }
         public DateTime FechaRegistro { get; set; }
         public bool Activo { get; set; }
