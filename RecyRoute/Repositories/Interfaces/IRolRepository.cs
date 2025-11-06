@@ -1,3 +1,4 @@
+RamaSergio
 ﻿using RecyRoute.Modelos;
 
 namespace RecyRoute.Repositories.Interfaces
@@ -17,3 +18,11 @@ namespace RecyRoute.Repositories.Interfaces
 }
 
 
+
+﻿namespace Recy_Route.Repositories.Interfaces
+{
+    public class IRolRepository
+    {
+    }
+}
+main

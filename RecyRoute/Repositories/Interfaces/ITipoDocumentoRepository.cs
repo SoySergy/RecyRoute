@@ -1,3 +1,4 @@
+RamaSergio
 ﻿using RecyRoute.Modelos;
 
 namespace RecyRoute.Repositories.Interfaces
@@ -13,5 +14,11 @@ namespace RecyRoute.Repositories.Interfaces
         Task<TipoDocumento> ActualizarTipoDocumento(TipoDocumento tipodocumento);
 
         Task<bool> EliminarTipoDocumento(Guid idtipodocumento);
+
+﻿namespace Recy_Route.Repositories.Interfaces
+{
+    public class ITipoDocumentoRepository
+    {
+main
     }
 }

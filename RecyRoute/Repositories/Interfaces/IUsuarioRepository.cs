@@ -1,3 +1,4 @@
+RamaSergio
 ﻿using RecyRoute.Modelos;
 
 namespace RecyRoute.Repositories.Interfaces
@@ -13,5 +14,11 @@ namespace RecyRoute.Repositories.Interfaces
         Task<Usuario> ActualizarUsuario(Usuario usuario);
 
         Task<bool> EliminarUsuario(Guid idusuario);
+
+﻿namespace Recy_Route.Repositories.Interfaces
+{
+    public class IUsuarioRepository
+    {
+main
     }
 }

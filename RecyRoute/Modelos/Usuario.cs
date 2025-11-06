@@ -2,7 +2,11 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
+RamaSergio
 namespace RecyRoute.Modelos
+
+namespace Recy_Route.Modelos
+main
 {
     public class Usuario
     {

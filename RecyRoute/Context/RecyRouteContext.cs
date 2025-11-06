@@ -1,7 +1,14 @@
+RamaSergio
 ﻿using RecyRoute.Modelos;
 using Microsoft.EntityFrameworkCore;
 
 namespace RecyRoute.Context
+
+﻿using Recy_Route.Modelos;
+using Microsoft.EntityFrameworkCore;
+
+namespace Recy_Route.Context
+main
 {
     public class RecyRouteContext : DbContext
     {
