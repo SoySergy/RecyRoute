@@ -1,7 +1,6 @@
 ﻿namespace RecyRoute.Controllers
 {
-    public class UsuarioController
+    public class RolController
     {
-
     }
 }

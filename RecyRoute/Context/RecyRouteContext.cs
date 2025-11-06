@@ -1,7 +1,7 @@
-﻿using Recy_Route.Modelos;
+﻿using RecyRoute.Modelos;
 using Microsoft.EntityFrameworkCore;
 
-namespace Recy_Route.Context
+namespace RecyRoute.Context
 {
     public class RecyRouteContext : DbContext
     {
