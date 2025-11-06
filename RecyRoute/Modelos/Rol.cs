@@ -1,15 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RecyRoute.NewFolder
+
+namespace Recy_Route.Modelos
 {
-    public class Rol
+    public class Rol 
     {
-        [Key]//se define la llave primaria
+        [Key]
         public Guid IdRol { get; set; } = Guid.NewGuid();
-        
-        //se definen los demas atributos de la clase
-        public string NombreRol { get; set; }
-        public string Descripcion { get; set; }
-        public ICollection<Usuario> Usuarios { get; set; }
+
+        [Required]
+        public string NombreRol { get; set; } = string.Empty;
+
+        [Required]
+        public string DescripcionRol { get; set; } = string.Empty;
+
+        public virtual ICollection<Usuario>? Usuario { get; set; }
     }
 }
