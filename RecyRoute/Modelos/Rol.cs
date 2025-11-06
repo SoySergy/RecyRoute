@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RecyRoute.NewFolder
+
+namespace Recy_Route.Modelos
 {
-    public class Rol
+    public class Rol 
     {
-        [Key]//se define la llave primaria
+        [Key]
         public Guid IdRol { get; set; } = Guid.NewGuid();
-        //aaa
 
         [Required]
         public string NombreRol { get; set; } = string.Empty;
