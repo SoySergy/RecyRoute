@@ -14,6 +14,7 @@
     <Folder Include="Backend\" />
     <Folder Include="Frontend\" />
     <Folder Include="Contexto\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
