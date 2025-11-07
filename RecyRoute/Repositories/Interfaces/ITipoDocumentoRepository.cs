@@ -15,3 +15,4 @@ namespace RecyRoute.Repositories.Interfaces
         Task<bool> EliminarTipoDocumento(Guid idtipodocumento);
     }
 }
+
