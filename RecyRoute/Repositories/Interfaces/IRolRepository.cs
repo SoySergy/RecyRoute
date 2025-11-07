@@ -1,5 +1,4 @@
-RamaSergio
-﻿using RecyRoute.Modelos;
+using RecyRoute.Modelos;
 
 namespace RecyRoute.Repositories.Interfaces
 {
@@ -16,13 +15,3 @@ namespace RecyRoute.Repositories.Interfaces
         Task<bool> EliminarRol (Guid idrol);
     }
 }
-
-
-
-﻿namespace Recy_Route.Repositories.Interfaces
-{
-    public class IRolRepository
-    {
-    }
-}
-main
