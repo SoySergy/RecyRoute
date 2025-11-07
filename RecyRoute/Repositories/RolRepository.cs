@@ -1,8 +1,4 @@
-RamaSergio
-﻿namespace RecyRoute.Repositories
-
-﻿namespace Recy_Route.Repositories
-main
+namespace RecyRoute.Repositories
 {
     public class RolRepository
     {

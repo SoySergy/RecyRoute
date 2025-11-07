@@ -1,12 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-RamaSergio
 namespace RecyRoute.Modelos
-
-
-namespace Recy_Route.Modelos
-main
 {
     public class Rol 
     {
