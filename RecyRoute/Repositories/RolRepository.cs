@@ -1,4 +1,4 @@
-﻿namespace Recy_Route.Repositories
+namespace RecyRoute.Repositories
 {
     public class RolRepository
     {

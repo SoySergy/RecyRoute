@@ -1,6 +1,17 @@
-﻿namespace Recy_Route.Repositories.Interfaces
+using RecyRoute.Modelos;
+
+namespace RecyRoute.Repositories.Interfaces
 {
-    public class IRolRepository
+    public interface IRolRepository
     {
+        Task<List<Rol>> ObtenerRoles();
+
+        Task<Rol> ObtenerRol(Guid idrol);
+
+        Task<Rol> CrearRol(Rol rol);
+
+        Task<Rol> ActualizarRol(Rol rol);
+
+        Task<bool> EliminarRol(Guid idrol);
     }
 }
