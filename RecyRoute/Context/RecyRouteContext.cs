@@ -1,14 +1,7 @@
-RamaSergio
-﻿using RecyRoute.Modelos;
+using RecyRoute.Modelos;
 using Microsoft.EntityFrameworkCore;
 
 namespace RecyRoute.Context
-
-﻿using Recy_Route.Modelos;
-using Microsoft.EntityFrameworkCore;
-
-namespace Recy_Route.Context
-main
 {
     public class RecyRouteContext : DbContext
     {
@@ -16,7 +9,7 @@ main
         {
         }
 
-        public DbSet<Usuario> Usario { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
         public DbSet<TipoDocumento> TipoDocumento { get; set; }
         public DbSet<Rol> Rol { get; set; }
 
