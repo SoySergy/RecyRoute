@@ -6,7 +6,7 @@ namespace RecyRoute.Repositories.Interfaces
     {
         Task<List<Rol>> ObtenerRoles();
 
-        Task<Rol> ObtenerRol(Guid idrol);
+        Task<Rol?> ObtenerRol(Guid idrol);
 
         Task<Rol> CrearRol(Rol rol);
 
