@@ -38,6 +38,7 @@ namespace RecyRoute.Modelos
 
         [JsonIgnore]
         public virtual Rol? Rol { get; set; }
+        [JsonIgnore]
         public virtual TipoDocumento? TipoDocumento { get; set; }
     }
 }
