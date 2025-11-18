@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi;
-using RecyRoute;
 using RecyRoute.Context;
 using RecyRoute.Repositories;
 using RecyRoute.Repositories.Interfaces;
+using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,7 +48,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigin",
         builder => builder
             .AllowAnyOrigin()  // Permitir cualquier origen
-            .AllowAnyMethod()  // Permitir cualquier método HTTP
+            .AllowAnyMethod()  // Permitir cualquier mï¿½todo HTTP
             .AllowAnyHeader()); // Permitir cualquier cabecera
 });
 var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
@@ -70,20 +65,19 @@ builder.Services.AddScoped<ISolicitudRecoleccionRepository, SolicitudRecoleccion
 builder.Services.AddScoped<IGestionRecoleccionRepository, GestionRecoleccionRepository>();
 
 
-
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-        ValidAudience = builder.Configuration["Jwt:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-    };
-});
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+//{
+//    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+//    {
+//        ValidateIssuer = true,
+//        ValidateAudience = true,
+//        ValidateLifetime = true,
+//        ValidateIssuerSigningKey = true,
+//        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+//        ValidAudience = builder.Configuration["Jwt:Audience"],
+//        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+//    };
+//});
 
 
 
