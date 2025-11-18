@@ -15,7 +15,7 @@ namespace RecyRoute
 
             services.AddDbContext<RecyRouteContext>(options => options.UseSqlServer(connectionString));
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-            services.AddScoped<ITipoDocumentoRepository, ITipoDocumentoRepository>();
+            services.AddScoped<ITipoDocumentoRepository, TipoDocumentoRepository>();
             services.AddScoped<IRolRepository, RolRepository>();
 
             return services;
