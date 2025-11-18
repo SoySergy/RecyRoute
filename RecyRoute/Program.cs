@@ -10,6 +10,7 @@ using RecyRoute.Repositories;
 using RecyRoute.Repositories.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using RecyRoute;
 
 var builder = WebApplication.CreateBuilder(args);
 
