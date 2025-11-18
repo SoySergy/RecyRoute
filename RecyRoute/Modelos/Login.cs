@@ -6,8 +6,7 @@ namespace RecyRoute.Modelos
     {
         [Required]
         public string NombreUsuario { get; set; } = string.Empty!;
-        [Required]
-        public Stream Contraseña { get; set; } = string.Empty!;
-
-    }
+        //[Required]
+        //public Stream Contraseña { get; set; } = string.Empty!;
+    } 
 }
