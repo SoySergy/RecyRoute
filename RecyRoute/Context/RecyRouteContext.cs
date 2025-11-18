@@ -217,6 +217,7 @@ namespace RecyRoute.Context
             });
             // Llama al método base por si se requiere configuración adicional
             base.OnModelCreating(modelBuilder);
+
         }
     }
 }
