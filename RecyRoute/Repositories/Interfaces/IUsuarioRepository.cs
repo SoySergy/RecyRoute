@@ -13,5 +13,6 @@ namespace RecyRoute.Repositories.Interfaces
         Task<Usuario> ActualizarUsuario(Usuario usuario);
 
         Task<bool> EliminarUsuario(Guid idusuario);
+        Task<Usuario> ObtenerUsuarioPorNombreUsuario(string nombreUsuario);
     }
 }

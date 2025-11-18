@@ -56,5 +56,13 @@ namespace RecyRoute.Repositories
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<Usuario> ObtenerUsuarioPorNombreUsuario(string nombreUsuario)
+        {
+            return await _context.Usuario
+                                 .Include(u => u.Rol)
+                                 .Include(u => u.TipoDocumento)
+                                 .FirstOrDefaultAsync(u => u.Correo == nombreUsuario);
+        }
     }
 }
