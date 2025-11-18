@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
@@ -6,7 +7,6 @@ using RecyRoute.Context;
 using RecyRoute.Repositories;
 using RecyRoute.Repositories.Interfaces;
 using System.Text;
-
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -66,17 +66,14 @@ builder.Services.AddDbContext<RecyRouteContext>();
 builder.Services.AddScoped<IRolRepository, RolRepository>();
 builder.Services.AddScoped<ITipoDocumentoRepository, TipoDocumentoRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<ISolicitudRecoleccionRepository, SolicitudRecoleccionRepository>();
+builder.Services.AddScoped<IGestionRecoleccionRepository, GestionRecoleccionRepository>();
 
-builder.Services.AddAuthentication(x =>
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
-    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(x =>
-{
-    x.RequireHttpsMetadata = false;
-    x.SaveToken = true;
-    x.TokenValidationParameters = new TokenValidationParameters
+    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
@@ -84,10 +81,12 @@ builder.Services.AddAuthentication(x =>
         ValidateIssuerSigningKey = true,
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(key),
-        ClockSkew = TimeSpan.Zero
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
 });
+
+
+
 var app = builder.Build();
 
 

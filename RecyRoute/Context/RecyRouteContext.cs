@@ -12,6 +12,8 @@ namespace RecyRoute.Context
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<TipoDocumento> TipoDocumento { get; set; }
         public DbSet<Rol> Rol { get; set; }
+        public DbSet<SolicitudRecoleccion> SolicitudRecoleccion { get; set; }
+        public DbSet<GestionRecoleccion> GestionRecoleccion { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -119,6 +121,100 @@ namespace RecyRoute.Context
                 entity.ToTable("TipoDocumentos");
             });
 
+            // Modelo: SolicitudRecoleccion
+            modelBuilder.Entity<SolicitudRecoleccion>(entity =>
+            {
+                // Define la clave primaria de la entidad SolicitudRecoleccion
+                entity.HasKey(e => e.IdSolicitud);
+
+                // Configura la propiedad IdSolicitud como nombre de columna en la base de datos
+                entity.Property(e => e.IdSolicitud).HasColumnName("IdSolicitud");
+
+                // Define que IdUsuario es obligatorio (no puede ser nulo)
+                entity.Property(e => e.IdUsuario).IsRequired().HasColumnName("IdUsuario");
+
+                // Configura la columna DireccionRecoleccion, requerida y con longitud máxima 200
+                entity.Property(e => e.DireccionRecoleccion).IsRequired().HasMaxLength(200).HasColumnName("DireccionRecoleccion");
+
+                // Configura la columna EstadoActual, requerida y con longitud máxima 20
+                entity.Property(e => e.EstadoActual).IsRequired().HasMaxLength(20).HasColumnName("EstadoActual");
+
+                // Configura la columna FechaSolicitud con valor por defecto de la fecha actual
+                entity.Property(e => e.FechaSolicitud).IsRequired().HasColumnName("FechaSolicitud").HasDefaultValueSql("GETDATE()");
+
+                // Configura la columna TipoResiduos, requerida y con longitud máxima 100
+                entity.Property(e => e.TipoResiduos).IsRequired().HasMaxLength(100).HasColumnName("TipoResiduos");
+
+                // Configura la columna ObservacionesCiudadano, opcional (nullable) y con longitud máxima 500
+                entity.Property(e => e.ObservacionesCiudadano).HasMaxLength(500).HasColumnName("ObservacionesCiudadano");
+
+                // Relación: una SolicitudRecoleccion pertenece a un Usuario
+                // HasOne = relación uno a uno o uno a muchos desde SolicitudRecoleccion hacia Usuario
+                // WithMany = un Usuario puede tener muchas SolicitudesRecoleccion
+                // HasForeignKey = la FK en SolicitudRecoleccion es IdUsuario
+                // OnDelete.Restrict = evita que se borre un Usuario si tiene Solicitudes asociadas
+                entity.HasOne(e => e.Usuario)
+                      .WithMany()
+                      .HasForeignKey(e => e.IdUsuario)
+                      .OnDelete(DeleteBehavior.Restrict);
+
+                // Asigna el nombre de la tabla física en la base de datos
+                entity.ToTable("SolicitudRecoleccion");
+            });
+
+            // Modelo: GestionRecoleccion
+            modelBuilder.Entity<GestionRecoleccion>(entity =>
+            {
+                // Define la clave primaria de la entidad GestionRecoleccion
+                entity.HasKey(e => e.IdGestion);
+
+                // Configura la propiedad IdGestion como nombre de columna en la base de datos
+                entity.Property(e => e.IdGestion).HasColumnName("IdGestion");
+
+                // Define que IdSolicitud es obligatorio (no puede ser nulo)
+                entity.Property(e => e.IdSolicitud).IsRequired().HasColumnName("IdSolicitud");
+
+                // Define que IdGestor es obligatorio (no puede ser nulo)
+                entity.Property(e => e.IdGestor).IsRequired().HasColumnName("IdGestor");
+
+                // Configura la columna Estado, requerida y con longitud máxima 20
+                entity.Property(e => e.Estado).IsRequired().HasMaxLength(20).HasColumnName("Estado");
+
+                // Configura la columna FechaCambioEstado, opcional (nullable)
+                entity.Property(e => e.FechaCambioEstado).HasColumnName("FechaCambioEstado");
+
+                // Configura la columna FechaProgramada, opcional (nullable)
+                entity.Property(e => e.FechaProgramada).HasColumnName("FechaProgramada");
+
+                // Configura la columna FechaRealizacion, opcional (nullable)
+                entity.Property(e => e.FechaRealizacion).HasColumnName("FechaRealizacion");
+
+                // Configura la columna ObservacionesGestor, opcional (nullable) y con longitud máxima 200
+                entity.Property(e => e.ObservacionesGestor).HasMaxLength(200).HasColumnName("ObservacionesGestor");
+
+                // Relación: una GestionRecoleccion pertenece a una SolicitudRecoleccion
+                // HasOne = relación uno a uno o uno a muchos desde GestionRecoleccion hacia SolicitudRecoleccion
+                // WithMany = una SolicitudRecoleccion puede tener muchas Gestiones
+                // HasForeignKey = la FK en GestionRecoleccion es IdSolicitud
+                // OnDelete.Restrict = evita que se borre una Solicitud si tiene Gestiones asociadas
+                entity.HasOne(e => e.SolicitudRecoleccion)
+                      .WithMany()
+                      .HasForeignKey(e => e.IdSolicitud)
+                      .OnDelete(DeleteBehavior.Restrict);
+
+                // Relación: una GestionRecoleccion pertenece a un Usuario (Gestor)
+                // HasOne = relación uno a uno o uno a muchos desde GestionRecoleccion hacia Usuario
+                // WithMany = un Usuario puede tener muchas Gestiones asignadas
+                // HasForeignKey = la FK en GestionRecoleccion es IdGestor
+                // OnDelete.Restrict = evita que se borre un Usuario si tiene Gestiones asociadas
+                entity.HasOne(e => e.Gestor)
+                      .WithMany()
+                      .HasForeignKey(e => e.IdGestor)
+                      .OnDelete(DeleteBehavior.Restrict);
+
+                // Asigna el nombre de la tabla física en la base de datos
+                entity.ToTable("GestionRecoleccion");
+            });
             // Llama al método base por si se requiere configuración adicional
             base.OnModelCreating(modelBuilder);
 
