@@ -13,12 +13,12 @@ namespace RecyRoute.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController : Controller
+    public class AutorizacionController : Controller
     {
       private readonly IUsuarioRepository _usuarioRepository;
       private readonly IConfiguration _configuration;
 
-        public AuthController(IUsuarioRepository usuarioRepository, IConfiguration configuration)
+        public AutorizacionController(IUsuarioRepository usuarioRepository, IConfiguration configuration)
         {
             _usuarioRepository = usuarioRepository;
             _configuration = configuration;
