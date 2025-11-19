@@ -9,8 +9,4 @@ namespace RecyRoute.Modelos
         [Required]
         public string Contrasena { get; set; } = string.Empty!;
     } 
-
-     
-    
-
 }
