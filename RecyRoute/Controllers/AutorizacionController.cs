@@ -62,8 +62,6 @@ namespace RecyRoute.Controllers
             {
                 return Unauthorized();
             }
-
         }
-
     }
 }
