@@ -28,7 +28,6 @@ namespace RecyRoute.Modelos
         [StringLength(200)]
         public string? ObservacionesGestor { get; set; }
 
-        // Propiedades de navegación
         [JsonIgnore]
         public virtual SolicitudRecoleccion? SolicitudRecoleccion { get; set; }
 
