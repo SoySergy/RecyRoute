@@ -9,6 +9,7 @@ namespace RecyRoute.Context
         {
         }
 
+        // Modelos de la base de datos
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<TipoDocumento> TipoDocumento { get; set; }
         public DbSet<Rol> Rol { get; set; }
@@ -17,6 +18,7 @@ namespace RecyRoute.Context
         public DbSet<Notificacion> Notificacion { get; set; }
         public DbSet<Historial> Historial { get; set; }
         public DbSet<HistorialChat> HistorialChat { get; set; }
+        //
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -40,6 +42,9 @@ namespace RecyRoute.Context
 
                 // Configura la columna Apellido, requerida y con longitud máxima 70
                 entity.Property(e => e.Apellido).IsRequired().HasMaxLength(70).HasColumnName("Apellido");
+
+                entity.Property(e => e.NumeroDocumento).IsRequired().HasMaxLength(30).HasColumnName("NumeroDocumento");
+
 
                 // Configura la columna Correo, requerida y con longitud máxima 100
                 entity.Property(e => e.Correo).IsRequired().HasMaxLength(100).HasColumnName("Correo");
@@ -71,7 +76,7 @@ namespace RecyRoute.Context
                 entity.HasOne(e => e.TipoDocumento).WithMany(t => t.Usuario).HasForeignKey(e => e.IdTipoDocumento).OnDelete(DeleteBehavior.Restrict);
 
                 // Asigna el nombre de la tabla física en la base de datos
-                entity.ToTable("Usuarios");
+                entity.ToTable("Usuario");
             });
             // Modelo: Rol
             modelBuilder.Entity<Rol>(entity =>
@@ -95,7 +100,7 @@ namespace RecyRoute.Context
                 entity.HasMany(r => r.Usuario).WithOne(u => u.Rol).HasForeignKey(u => u.IdRol);
 
                 // Asigna el nombre de la tabla física en la base de datos
-                entity.ToTable("Roles");
+                entity.ToTable("Rol");
             });
             // Modelo: TipoDocumento
             modelBuilder.Entity<TipoDocumento>(entity =>
@@ -121,7 +126,7 @@ namespace RecyRoute.Context
                       .HasForeignKey(u => u.IdTipoDocumento);
 
                 // Asigna el nombre de la tabla física en la base de datos
-                entity.ToTable("TipoDocumentos");
+                entity.ToTable("TipoDocumento");
             });
 
             // Modelo: SolicitudRecoleccion
@@ -131,39 +136,77 @@ namespace RecyRoute.Context
                 entity.HasKey(e => e.IdSolicitud);
 
                 // Configura la propiedad IdSolicitud como nombre de columna en la base de datos
-                entity.Property(e => e.IdSolicitud).HasColumnName("IdSolicitud");
+                entity.Property(e => e.IdSolicitud)
+                      .HasColumnName("IdSolicitud");
 
                 // Define que IdUsuario es obligatorio (no puede ser nulo)
-                entity.Property(e => e.IdUsuario).IsRequired().HasColumnName("IdUsuario");
+                entity.Property(e => e.IdUsuario)
+                      .IsRequired()
+                      .HasColumnName("IdUsuario");
+
+                // Configura la columna FechaDeRecoleccion (nueva propiedad)
+                entity.Property(e => e.FechaDeRecoleccion)
+                      .IsRequired()
+                      .HasColumnName("FechaDeRecoleccion");
+
+                // Configura la columna HoraDeRecoleccion (nueva propiedad)
+                entity.Property(e => e.HoraDeRecoleccion)
+                      .IsRequired()
+                      .HasMaxLength(20)
+                      .HasColumnName("HoraDeRecoleccion");
 
                 // Configura la columna DireccionRecoleccion, requerida y con longitud máxima 200
-                entity.Property(e => e.DireccionRecoleccion).IsRequired().HasMaxLength(200).HasColumnName("DireccionRecoleccion");
+                entity.Property(e => e.DireccionRecoleccion)
+                      .IsRequired()
+                      .HasMaxLength(200)
+                      .HasColumnName("DireccionRecoleccion");
+
+                // Configura la columna TelefonoContacto (nueva propiedad)
+                entity.Property(e => e.TelefonoContacto)
+                      .IsRequired()
+                      .HasMaxLength(20)
+                      .HasColumnName("TelefonoContacto");
 
                 // Configura la columna EstadoActual, requerida y con longitud máxima 20
-                entity.Property(e => e.EstadoActual).IsRequired().HasMaxLength(20).HasColumnName("EstadoActual");
+                entity.Property(e => e.EstadoActual)
+                      .IsRequired()
+                      .HasMaxLength(20)
+                      .HasColumnName("EstadoActual")
+                      .HasDefaultValue("Pendiente");
 
                 // Configura la columna FechaSolicitud con valor por defecto de la fecha actual
-                entity.Property(e => e.FechaSolicitud).IsRequired().HasColumnName("FechaSolicitud").HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.FechaSolicitud)
+                      .IsRequired()
+                      .HasColumnName("FechaSolicitud")
+                      .HasDefaultValueSql("GETDATE()");
 
-                // Configura la columna TipoResiduos, requerida y con longitud máxima 100
-                entity.Property(e => e.TipoResiduos).IsRequired().HasMaxLength(100).HasColumnName("TipoResiduos");
+                // Configura la columna TipoResiduos, requerida y con longitud máxima 200 (actualizado de 100)
+                entity.Property(e => e.TipoResiduos)
+                      .IsRequired()
+                      .HasMaxLength(200)
+                      .HasColumnName("TipoResiduos");
 
                 // Configura la columna ObservacionesCiudadano, opcional (nullable) y con longitud máxima 500
-                entity.Property(e => e.ObservacionesCiudadano).HasMaxLength(500).HasColumnName("ObservacionesCiudadano");
+                entity.Property(e => e.ObservacionesCiudadano)
+                      .HasMaxLength(500)
+                      .HasColumnName("ObservacionesCiudadano");
 
                 // Relación: una SolicitudRecoleccion pertenece a un Usuario
-                // HasOne = relación uno a uno o uno a muchos desde SolicitudRecoleccion hacia Usuario
-                // WithMany = un Usuario puede tener muchas SolicitudesRecoleccion
-                // HasForeignKey = la FK en SolicitudRecoleccion es IdUsuario
-                // OnDelete.Restrict = evita que se borre un Usuario si tiene Solicitudes asociadas
                 entity.HasOne(e => e.Usuario)
                       .WithMany()
                       .HasForeignKey(e => e.IdUsuario)
                       .OnDelete(DeleteBehavior.Restrict);
 
+                // Relación: una SolicitudRecoleccion tiene muchos Historiales (nueva relación)
+                entity.HasMany(e => e.Historial)
+                      .WithOne()
+                      .HasForeignKey("IdSolicitud")
+                      .OnDelete(DeleteBehavior.Cascade);
+
                 // Asigna el nombre de la tabla física en la base de datos
                 entity.ToTable("SolicitudRecoleccion");
             });
+        
 
             // Modelo: GestionRecoleccion
             modelBuilder.Entity<GestionRecoleccion>(entity =>
@@ -274,7 +317,7 @@ namespace RecyRoute.Context
                       .OnDelete(DeleteBehavior.Cascade);
 
                 // Asigna el nombre de la tabla física en la base de datos
-                entity.ToTable("Notificaciones");
+                entity.ToTable("Notificacion");
             });
 
             // Modelo: Historial

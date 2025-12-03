@@ -19,6 +19,7 @@ namespace RecyRoute
             services.AddScoped<IRolRepository, RolRepository>();
             services.AddScoped<ISolicitudRecoleccionRepository, SolicitudRecoleccionRepository>();
             services.AddScoped<IGestionRecoleccionRepository, GestionRecoleccionRepository>();
+            services.AddScoped<INotificacionRepository, NotificacionRepository>();
             services.AddScoped<IHistorialRepository, HistorialRepository>();
             services.AddScoped<IHistorialChatRepository, HistorialChatRepository>();
 

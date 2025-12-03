@@ -5,7 +5,9 @@ namespace RecyRoute.Modelos
     public class Login 
     {
         [Required]
-        public string NombreUsuario { get; set; } = string.Empty!;
+        // Incorrecto: public string NombreUsuario { get; set; } = string.Empty!;
+
+        public string Correo { get; set; } = string.Empty!;
         [Required]
         public string Contrasena { get; set; } = string.Empty!;
     } 

@@ -19,7 +19,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/historialchat/ObtenerMensajesPorSolicitud/{idSolicitud} --------------------
-        [HttpGet("ObtenerMensajesPorSolicitud/{idSolicitud}")]
+        [HttpGet("ObtenerMensajesPorSolicitud")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -41,7 +41,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/historialchat/ObtenerMensaje/{idHistorialChat} --------------------
-        [HttpGet("ObtenerMensaje/{idHistorialChat}")]
+        [HttpGet("ObtenerMensaje")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -90,7 +90,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- PUT: api/historialchat/MarcarComoLeido/{idHistorialChat} --------------------
-        [HttpPut("MarcarComoLeido/{idHistorialChat}")]
+        [HttpPut("MarcarComoLeido")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -112,7 +112,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/historialchat/ObtenerMensajesNoLeidos/{idUsuario}/{idSolicitud} --------------------
-        [HttpGet("ObtenerMensajesNoLeidos/{idUsuario}/{idSolicitud}")]
+        [HttpGet("ObtenerMensajesNoLeidos")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -134,7 +134,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- DELETE: api/historialchat/EliminarMensaje/{idHistorialChat} --------------------
-        [HttpDelete("EliminarMensaje/{idHistorialChat}")]
+        [HttpDelete("EliminarMensaje")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
