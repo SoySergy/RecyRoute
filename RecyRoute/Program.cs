@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -58,8 +59,9 @@ var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
 
 
 // Contexto de base de datos
-builder.Services.AddDbContext<RecyRouteContext>();
-
+builder.Services.AddDbContext<RecyRouteContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnectionStrings")));
+//
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters

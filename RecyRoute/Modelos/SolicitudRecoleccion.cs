@@ -46,6 +46,6 @@ namespace RecyRoute.Modelos
         public virtual Usuario? Usuario { get; set; }
 
         [JsonIgnore]
-        public virtual ICollection<Historial>? Historiales { get; set; }
+        public virtual ICollection<Historial>? Historial { get; set; }
     }
 }

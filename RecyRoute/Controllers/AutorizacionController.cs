@@ -23,15 +23,16 @@ namespace RecyRoute.Controllers
             _usuarioRepository = usuarioRepository;
             _configuration = configuration;
         }
-        [HttpGet("Login")]
+        [HttpPost("Login")]
+        [AllowAnonymous] // No pide token
         public async Task<IActionResult> Login(Login login)
         {
-            if (login == null || string.IsNullOrEmpty(login.NombreUsuario) || string.IsNullOrEmpty(login.Contrasena))
+            if (login == null || string.IsNullOrEmpty(login.Correo) || string.IsNullOrEmpty(login.Contrasena))
             {
                 return BadRequest("Invalid client request");
             }
 
-            var Usuario = await _usuarioRepository.ObtenerUsuarioPorNombreUsuario(login.NombreUsuario);
+            var Usuario = await _usuarioRepository.ObtenerUsuarioPorCorreo(login.Correo);
             if (Usuario == null)
             {
                 return Unauthorized();
@@ -48,7 +49,7 @@ namespace RecyRoute.Controllers
                     audience: _configuration["Jwt:Audience"],
                     claims: new List<Claim>
                     {
-                    new Claim(ClaimTypes.Name, login.NombreUsuario), // Usamos el email como nombre de usuario
+                    new Claim(ClaimTypes.Name, login.Correo), // Usamos el email como nombre de usuario
                     new Claim(ClaimTypes.Role,Usuario.Rol.NombreRol) // Puedes ajustar el rol según sea necesario
                     },
                     expires: DateTime.Now.AddMinutes(30),

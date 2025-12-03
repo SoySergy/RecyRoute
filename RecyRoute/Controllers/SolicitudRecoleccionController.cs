@@ -42,7 +42,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/solicitudrecoleccion/ObtenerSolicitudRecoleccionPorId/{idSolicitud} --------------------
-        [HttpGet("ObtenerSolicitudRecoleccionPorId/{idSolicitud}")]
+        [HttpGet("ObtenerSolicitudRecoleccionPorId")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -114,7 +114,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- DELETE: api/solicitudrecoleccion/EliminarSolicitudRecoleccion/{idSolicitud} --------------------
-        [HttpDelete("EliminarSolicitudRecoleccion/{idSolicitud}")]
+        [HttpDelete("EliminarSolicitudRecoleccion")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

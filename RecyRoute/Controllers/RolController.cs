@@ -41,7 +41,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/rol/ObtenerRolPorId/{idrol} --------------------
-        [HttpGet("ObtenerRolPorId/{idrol}")]
+        [HttpGet("ObtenerRolPorId")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -105,7 +105,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- DELETE: api/rol/EliminarRol/{idrol} --------------------
-        [HttpDelete("EliminarRol/{idrol}")]
+        [HttpDelete("EliminarRol")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

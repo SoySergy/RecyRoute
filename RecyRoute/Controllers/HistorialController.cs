@@ -41,7 +41,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/historial/ObtenerPorId/{idHistorial} --------------------
-        [HttpGet("ObtenerPorId/{idHistorial}")]
+        [HttpGet("ObtenerPorId")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -63,7 +63,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/historial/ObtenerPorSolicitud/{idSolicitud} --------------------
-        [HttpGet("ObtenerPorSolicitud/{idSolicitud}")]
+        [HttpGet("ObtenerPorSolicitud")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -85,7 +85,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/historial/ObtenerPorUsuario/{idUsuario} --------------------
-        [HttpGet("ObtenerPorUsuario/{idUsuario}")]
+        [HttpGet("ObtenerPorUsuario")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -107,7 +107,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/historial/ObtenerPorEstadoNuevo/{estadoNuevo} --------------------
-        [HttpGet("ObtenerPorEstadoNuevo/{estadoNuevo}")]
+        [HttpGet("ObtenerPorEstadoNuevo")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -219,7 +219,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- DELETE: api/historial/EliminarHistorial/{idHistorial} --------------------
-        [HttpDelete("EliminarHistorial/{idHistorial}")]
+        [HttpDelete("EliminarHistorial")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -241,7 +241,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/historial/ExisteHistorial/{idHistorial} --------------------
-        [HttpGet("ExisteHistorial/{idHistorial}")]
+        [HttpGet("ExisteHistorial")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> ExisteHistorial(Guid idHistorial)

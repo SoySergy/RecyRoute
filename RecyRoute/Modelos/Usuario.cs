@@ -22,6 +22,9 @@ namespace RecyRoute.Modelos
         public string Apellido { get; set; } = string.Empty;
 
         [Required]
+        public string NumeroDocumento { get; set; } = string.Empty;
+
+        [Required]
         public string Correo { get; set; } = string.Empty;
 
         [Required]

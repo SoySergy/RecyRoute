@@ -41,7 +41,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/usuario/ObtenerUsuarioPorId/{idusuario} --------------------
-        [HttpGet("ObtenerUsuarioPorId/{idusuario}")]
+        [HttpGet("ObtenerUsuarioPorId")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -113,7 +113,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- DELETE: api/usuario/EliminarUsuario/{idusuario} --------------------
-        [HttpDelete("EliminarUsuario/{idusuario}")]
+        [HttpDelete("EliminarUsuario")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

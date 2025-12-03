@@ -42,7 +42,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- GET: api/tipodocumento/ObtenerTipoDocumentoPorId/{id} --------------------
-        [HttpGet("ObtenerTipoDocumentoPorId/{id}")]
+        [HttpGet("ObtenerTipoDocumentoPorId")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -106,7 +106,7 @@ namespace RecyRoute.Controllers
         }
 
         // -------------------- DELETE: api/tipodocumento/EliminarTipoDocumento/{id} --------------------
-        [HttpDelete("EliminarTipoDocumento/{id}")]
+        [HttpDelete("EliminarTipoDocumento")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
