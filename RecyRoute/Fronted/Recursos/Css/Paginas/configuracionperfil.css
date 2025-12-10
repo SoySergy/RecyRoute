@@ -1,0 +1,330 @@
+﻿/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+.ContenedorPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+}
+
+/* ========================================
+   CAJA DE CONFIGURACIÓN DEL PERFIL
+   ======================================== */
+.CajaConfiguracionPerfil {
+    width: 780px;
+    margin: 1px auto;
+    padding: 35px 35px;
+    background: #c8e6c9;
+    border-radius: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.05);
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.06), 0 8px 20px rgba(5, 150, 105, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   ENCABEZADO DE CONFIGURACIÓN
+   ======================================== */
+.EncabezadoConfiguracion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.TituloConIcono {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Icono de Engranaje junto al título */
+.IconoConfiguracion {
+    width: 32px;
+    height: 32px;
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+}
+
+.TituloConfiguracion {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+}
+
+/* ========================================
+   BOTÓN VOLVER
+   ======================================== */
+.BotonVolver {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 1px solid #2e7d32;
+    border-radius: 8px;
+    background-color: white;
+    color: #2e7d32;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+    text-decoration: none;
+}
+
+    .BotonVolver:hover {
+        transform: scale(1.05);
+        background-color: #2e7d32;
+        color: white;
+    }
+
+        .BotonVolver:hover .IconoCasaVolver {
+            filter: brightness(0) invert(1);
+        }
+
+.TextoVolver {
+    text-decoration: none;
+}
+
+/* Icono de Casa en Botón Volver */
+.IconoCasaVolver {
+    width: 18px;
+    height: 18px;
+    transition: filter 0.25s ease;
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+}
+
+/* ========================================
+   SUBTÍTULO
+   ======================================== */
+.SubtituloConfiguracion {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    color: #424242;
+    margin: 0 0 10px 0;
+}
+
+/* ========================================
+   FORMULARIO
+   ======================================== */
+.FormularioPerfil {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ========================================
+   FILAS DEL FORMULARIO (2 COLUMNAS)
+   ======================================== */
+.FilaFormulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ========================================
+   CAMPO COMPLETO (1 COLUMNA)
+   ======================================== */
+.CampoFormularioCompleto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ========================================
+   CAMPOS INDIVIDUALES
+   ======================================== */
+.CampoFormulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ========================================
+   ETIQUETAS CON ICONOS
+   ======================================== */
+.EtiquetaCampo {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2e7d32;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Iconos junto a las etiquetas */
+.IconoCampo {
+    width: 20px;
+    height: 20px;
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+}
+
+/* ========================================
+   CONTENEDOR DE INPUTS
+   ======================================== */
+.ContenedorInput {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* ========================================
+   INPUTS Y SELECT
+   ======================================== */
+.InputPerfil {
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    color: #374151;
+    background-color: white;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.25s ease;
+}
+
+    .InputPerfil:focus {
+        background-color: #ffffff;
+        box-shadow: 0 0 0 2px #2e7d32;
+    }
+
+    .InputPerfil::placeholder {
+        color: #9ca3af;
+    }
+
+/* Select específico */
+select.InputPerfil {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 40px;
+}
+
+/* ========================================
+   ICONO DE EDITAR (LÁPIZ)
+   ======================================== */
+.IconoEditar {
+    position: absolute;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    filter: invert(50%) sepia(0%) saturate(0%) brightness(80%);
+    pointer-events: none;
+    transition: filter 0.25s ease;
+}
+
+.ContenedorInput:hover .IconoEditar,
+.InputPerfil:focus ~ .IconoEditar {
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+}
+
+/* ========================================
+   BOTÓN GUARDAR CAMBIOS
+   ======================================== */
+.BotonGuardarCambios {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #2e7d32;
+    color: white;
+    margin-top: 10px;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+}
+
+    .BotonGuardarCambios:hover {
+        transform: scale(1.05);
+        background-color: #00cc44;
+        box-shadow: 0 6px 16px rgba(46, 125, 50, 0.3);
+    }
+
+    .BotonGuardarCambios:active {
+        transform: scale(0.98);
+    }
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 900px) {
+    .CajaConfiguracionPerfil {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .FilaFormulario {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .CajaConfiguracionPerfil {
+        padding: 25px 20px;
+    }
+
+    .FilaFormulario {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .TituloConfiguracion {
+        font-size: 20px;
+    }
+
+    .IconoConfiguracion {
+        width: 28px;
+        height: 28px;
+    }
+
+    .BotonVolver {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .IconoCasaVolver {
+        width: 16px;
+        height: 16px;
+    }
+
+    .InputPerfil {
+        font-size: 14px;
+        padding: 10px 35px 10px 14px;
+    }
+
+    .BotonGuardarCambios {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .EncabezadoConfiguracion {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .TituloConfiguracion {
+        font-size: 18px;
+    }
+
+    .IconoConfiguracion {
+        width: 24px;
+        height: 24px;
+    }
+}

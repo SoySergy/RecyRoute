@@ -1,0 +1,38 @@
+﻿/* ESTILO GENERAL PARA TODOS LOS BOTONES */
+.btn {
+    font-family: Poppins; /* Tipografía */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: 600; /* Grosor */
+    padding: 12px 24px; /* Tamaño del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Forma */
+    cursor: pointer; /* Manito */
+    display: inline-block; /* Necesario para transform */
+    text-decoration: none; /* Por si usas <a> como botón */
+
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+/* Hover general para TODOS los botones */
+.btn:hover {
+    transform: scale(1.05); /* Zoom suave */
+}
+
+
+/*Botones de la pagina principal index.html*/
+.BotonIniciarSesion {
+    color: azure;
+    background-color: #1976d2;
+}
+
+.BotonIniciarSesion:hover {
+    background-color: #0088FF;
+}
+
+.BotonRegistrarse {
+    color: azure;
+    background-color: #2e7d32;
+}
+
+.BotonRegistrarse:hover {
+    background-color: #00cc44;
+}

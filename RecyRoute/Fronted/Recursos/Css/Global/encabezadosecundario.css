@@ -1,0 +1,10 @@
+﻿.EncabezadoSecundario {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 1px ;
+    width: 100%;
+    background-color: none;
+}
+
+

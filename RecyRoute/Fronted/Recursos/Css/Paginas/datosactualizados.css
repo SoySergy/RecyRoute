@@ -1,0 +1,157 @@
+﻿/* ========================================
+   ESTILOS GENERALES DEL BODY
+   ======================================== */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    min-height: 100vh;
+}
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+.ContenedorPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ========================================
+   CAJA DE CONFIRMACIÓN
+   ======================================== */
+.CajaConfirmacion {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    background: #c8e6c9;
+    border-radius: 20px;
+/*    border: 2px solid #81c784;*/
+/*    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.15), 0 8px 20px rgba(5, 150, 105, 0.1);*/
+    animation: aparecer 0.4s ease-out;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ========================================
+   CONTENIDO DE LA CONFIRMACIÓN
+   ======================================== */
+.ContenidoConfirmacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+/* ========================================
+   TÍTULO CON ICONO
+   ======================================== */
+.TituloConfirmacion {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   MENSAJE DE CONFIRMACIÓN
+   ======================================== */
+.MensajeConfirmacion {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    color: #2e7d32;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ========================================
+   BOTÓN VOLVER AL MENÚ
+   ======================================== */
+.BotonVolverMenu {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #2e7d32;
+    color: white;
+    margin-top: 10px;
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+    text-decoration: none;
+    display: inline-block;
+}
+
+    .BotonVolverMenu:hover {
+        transform: scale(1.05);
+        background-color: #00cc44;
+        box-shadow: 0 6px 16px rgba(46, 125, 50, 0.3);
+    }
+
+    .BotonVolverMenu:active {
+        transform: scale(0.98);
+    }
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 500px) {
+    .CajaConfirmacion {
+        padding: 30px 25px;
+        width: 100%;
+    }
+
+    .TituloConfirmacion {
+        font-size: 19px;
+    }
+
+
+    .MensajeConfirmacion {
+        font-size: 14px;
+    }
+
+    .BotonVolverMenu {
+        font-size: 15px;
+        padding: 12px 28px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .TituloConfirmacion {
+        font-size: 17px;
+        gap: 8px;
+    }
+
+    .BotonVolverMenu {
+        font-size: 14px;
+        padding: 10px 24px;
+    }
+}

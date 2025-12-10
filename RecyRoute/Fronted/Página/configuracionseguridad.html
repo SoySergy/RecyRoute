@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RecyRoute</title>
+    <link rel="icon" href="../Recursos/Iconos/Head/logorecyroute.svg" />
+
+    <link rel="stylesheet" href="../Recursos/Css/Global/encabezadousuario.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/configuracionseguridad.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/tipografia.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/base.css" />
+
+</head>
+<body>
+
+    <header class="EncabezadoPrincipal">
+        <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
+        <div class="ContenedorIconos">
+            <a class="IconoMensaje" href="chat.html"><img src="../Recursos/Iconos/Head/mensaje.svg" alt="IconoMensaje"></a>
+            <a class="IconoNotificacion" href="notificacion.html"><img src="../Recursos/Iconos/Head/notificaciones.svg" alt="IconoNotificacion"></a>
+            <a class="IconoUsuario" href="configuracionperfil.html"><img src="../Recursos/Iconos/Head/usuario.svg" alt="IconoUsuario"></a>
+            <a class="NombreUsuario" href="perfil.html"><h2>Usuario</h2></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="ContenedorPrincipal">
+            <div class="CajaConfiguracionSeguridad">
+                <div class="EncabezadoConfiguracion">
+                    <div class="TituloConIcono">
+                        <!-- ICONO DE LLAVE/CANDADO - Junto al título -->
+                        <img class="IconoSeguridad" src="../Recursos/Iconos/Head/candado.svg" alt="IconoSeguridad">
+                        <h2 class="TituloConfiguracion">Configuración de Seguridad</h2>
+                    </div>
+                    <button class="BotonVolver" onclick="location.href='configuracion.html'">
+                        <!-- ICONO DE CASA - Botón Volver -->
+                        <img class="IconoCasaVolver" src="../Recursos/Iconos/Head/inicio.svg" alt="IconoCasa">
+                        <span class="TextoVolver">Volver</span>
+                    </button>
+                </div>
+
+                <p class="SubtituloConfiguracion">Cambiar contraseña</p>
+
+                <form class="FormularioSeguridad" id="formSeguridad">
+                    <div class="CampoFormulario">
+                        <label class="EtiquetaCampo">Contraseña actual</label>
+                        <div class="ContenedorInputPassword">
+                            <input type="password" class="InputSeguridad" id="passwordActual" placeholder="***************" required>
+                            <!-- ICONO DE OJO ABIERTO - Ver contraseña -->
+                            <img class="IconoOjo" src="../Recursos/Iconos/Head/ojocerrado.svg" alt="Mostrar contraseña" onclick="togglePassword('passwordActual', this)">
+                        </div>
+                    </div>
+
+                    <div class="CampoFormulario">
+                        <label class="EtiquetaCampo">Nueva contraseña</label>
+                        <div class="ContenedorInputPassword">
+                            <input type="password" class="InputSeguridad" id="passwordNueva" placeholder="***************" required>
+                            <!-- ICONO DE OJO ABIERTO - Ver contraseña -->
+                            <img class="IconoOjo" src="../Recursos/Iconos/Head/ojocerrado.svg" alt="Mostrar contraseña" onclick="togglePassword('passwordNueva', this)">
+                        </div>
+                    </div>
+
+                    <div class="CampoFormulario">
+                        <label class="EtiquetaCampo">Confirmar nueva contraseña</label>
+                        <div class="ContenedorInputPassword">
+                            <input type="password" class="InputSeguridad" id="passwordConfirmar" placeholder="***************" required>
+                            <!-- ICONO DE OJO ABIERTO - Ver contraseña -->
+                            <img class="IconoOjo" src="../Recursos/Iconos/Head/ojocerrado.svg" alt="Mostrar contraseña" onclick="togglePassword('passwordConfirmar', this)">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="BotonGuardarCambios">Guardar Cambios</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Función para alternar visibilidad de contraseña
+        function togglePassword(inputId, iconElement) {
+            // Prevenir múltiples clics rápidos
+            if (iconElement.dataset.clicking === 'true') return;
+            iconElement.dataset.clicking = 'true';
+
+            const input = document.getElementById(inputId);
+            const rutaIconos = '../Recursos/Iconos/Head/';
+
+            if (input.type === 'password') {
+                // Cambiar a texto visible
+                input.type = 'text';
+                iconElement.src = rutaIconos + 'ojo.svg';
+                iconElement.alt = 'Ocultar contraseña';
+            } else {
+                // Cambiar a oculto
+                input.type = 'password';
+                iconElement.src = rutaIconos + 'ojocerrado.svg';
+                iconElement.alt = 'Mostrar contraseña';
+            }
+
+            // Permitir siguiente clic después de un momento
+            setTimeout(() => {
+                iconElement.dataset.clicking = 'false';
+            }, 200);
+        }
+
+        // Manejar el envío del formulario
+        document.getElementById('formSeguridad').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Obtener los valores
+            const passwordActual = document.getElementById('passwordActual').value;
+            const passwordNueva = document.getElementById('passwordNueva').value;
+            const passwordConfirmar = document.getElementById('passwordConfirmar').value;
+
+            // Validar que la nueva contraseña coincida con la confirmación
+            if (passwordNueva !== passwordConfirmar) {
+                alert('Las contraseñas nuevas no coinciden. Por favor, verifica.');
+                return;
+            }
+
+            // Validar longitud mínima de contraseña
+            if (passwordNueva.length < 8) {
+                alert('La nueva contraseña debe tener al menos 8 caracteres.');
+                return;
+            }
+
+            // Objeto con los datos
+            const datosSeguridad = {
+                passwordActual: passwordActual,
+                passwordNueva: passwordNueva
+            };
+
+            // Aquí enviarías los datos al servidor
+            // Por ejemplo, con fetch:
+            /*
+            fetch('actualizar_password.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(datosSeguridad)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    window.location.href = 'datosactualizados.html';
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Hubo un error al cambiar la contraseña');
+            });
+            */
+
+            // Por ahora, simulamos el cambio y redirigimos
+            console.log('Datos de seguridad:', datosSeguridad);
+
+            // Redirigir a la página de confirmación
+            window.location.href = 'datosactualizados.html';
+        });
+    </script>
+</body>
+</html>

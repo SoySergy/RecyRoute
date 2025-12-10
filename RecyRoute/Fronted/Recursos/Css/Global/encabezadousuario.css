@@ -1,0 +1,41 @@
+﻿.EncabezadoPrincipal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: none;
+}
+
+.ContenedorIconos {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Estilos para todos los iconos */
+.IconoMensaje img,
+.IconoNotificacion img,
+.IconoUsuario img {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+    display: block;
+    filter: invert(32%) sepia(53%) saturate(1447%) hue-rotate(88deg) brightness(91%) contrast(88%);
+}
+
+/* Efecto hover para todos los iconos */
+.IconoMensaje:hover img,
+.IconoNotificacion:hover img,
+.IconoUsuario:hover img {
+    transform: scale(1.15);
+    filter: invert(32%) sepia(53%) saturate(1447%) hue-rotate(88deg) brightness(91%) contrast(88%) drop-shadow(0 0 8px rgba(46, 125, 50, 0.6));
+}
+
+.NombreUsuario h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #2E2E2E;
+}

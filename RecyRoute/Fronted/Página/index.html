@@ -1,43 +1,48 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
-    <!--Titulo de la pagina-->
     <title>RecyRoute</title>
-    <!--Favicon-->
     <link rel="icon" href="../Recursos/Iconos/Head/logorecyroute.svg" />
     <!--CSS-->
-    <link rel="stylesheet" href="../Recursos/Css/reset.css">
-    <link rel="stylesheet" href="../Recursos/Css/base.css">
-    <link rel="stylesheet" href="../Recursos/Css/headerprincipal.css">
+    <link rel="stylesheet" href="../Recursos/Css/Global/encabezadoprincipal.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/index.css"/>
+    <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css"/>
+    <link rel="stylesheet" href="../Recursos/Css/Global/tipografia.css"/>
+    <link rel="stylesheet" href="../Recursos/Css/Global/base.css"/>
+
 </head>
+
 <body>
-    <!--Encabezado-->
-    <header class="Encabezado">
+
+    <header class="EncabezadoPrincipal">
         <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
-        <div class="Botones">
-            <!--Botón de Iniciar Sesión -->
-                <button class="BotonIniciarSesion" onclick="location.href='iniciarsesion.html'">Iniciar Sesión</button>
-            <!--Botón de Registrarse-->
-                <button class="BotonRegistrarse" onclick="location.href='registro.html'">Registrarse</button>
+        <div class="ContenedorBotones"> 
+            <button class="btn BotonIniciarSesion" onclick="location.href='iniciarsesión.html'">Iniciar sesión</button>
+            <button class="btn BotonRegistrarse" onclick="location.href='registrarse.html'">Registrarse</button>
         </div>
     </header>
+
     <main>
-        <!--Contenido Principal-->
-        <div class="ContenidoPrincipal">
+        <div class="ContenedorPrincipal">
             <div class="TextoPrincipal">
                 <h2>
-                    Conectamos el<br><span class="green">reciclaje</span> de tu hogar <br>
-                    con <span class="blue">gestores<br>ambientales</span><br>
+                    Conectamos el<br><span class="ParrafoVerde">reciclaje</span> de tu hogar <br>
+                    con <span class="ParrafoAzul">gestores<br>ambientales</span>
                 </h2>
-                <p>
+                <p class="TextoSecundario">
                     Facilitamos la comunicación entre hogares que reciclan<br>y gestores
                     ambientales para crear un sistema de recolección<br>más eficiente
                     y sostenible.
                 </p>
             </div>
-            <img class="ImagenPrincipal" src="../Recursos/Imágenes/reciclaje.png" alt="Imagen de la pagina principal" />
+            <div class="ContenedorImagen">
+                <img class="ImagenPrincipal" src="../Recursos/Imágenes/reciclaje.png" alt="Imagen de la pagina principal" />
+            </div>
         </div>
     </main>
+
 </body>
+
 </html>

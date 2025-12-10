@@ -1,0 +1,38 @@
+﻿body {
+}
+
+.ContenedorPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px; 
+    gap: 40px;
+}
+
+.TextoPrincipal {
+    flex: 1;
+}
+
+.TextoPrincipal h2 {
+    font-family: Poppins;
+    font-size: 38px
+}
+
+.ParrafoVerde {
+    color: #2e7d32;
+}
+
+.ParrafoAzul {
+    color: #1976d2;
+}
+
+.ContenedorImagen {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ImagenPrincipal {
+    width: 460px;
+    height: auto;
+}

@@ -1,0 +1,19 @@
+﻿.LogoRecyRoute a {
+
+    font-family: Poppins; /*Tipografía*/
+    font-size: 42px; /*Tamaño de letra*/
+    font-style: italic; /*Estilo de letra*/
+    text-decoration: none;
+    color: #2e7d32;
+
+    display: inline-block; /* Necesario para permitir el zoom */
+    transition: color 0.25s ease, /* Transición del color */
+    transform 0.25s ease; /* Transición del zoom */
+
+}
+
+/* Efecto hover */
+.LogoRecyRoute a:hover {
+    transform: scale(1.07); /* Zoom al pasar el mouse */
+}
+
