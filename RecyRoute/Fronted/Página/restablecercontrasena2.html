@@ -11,21 +11,18 @@
     <link rel="stylesheet" href="../Recursos/Css/Global/encabezadosecundario.css" />
     <!-- Componentes -->
     <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css" />
-    <link rel="stylesheet" href="../Recursos/Css/Componentes/formularios.css" />
     <!-- Página específica -->
-    <link rel="stylesheet" href="../Recursos/Css/Paginas/olvidastetucontrasena.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/restablecercontrasena2.css" />
 </head>
 <body>
     <header class="EncabezadoSecundario">
         <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
     </header>
     <main>
-        <div class="CajaRecuperarContrasena">
-            <h2 class="TituloRecuperar">¿Olvidaste tu contraseña?</h2>
-            <p class="MensajeInstrucciones">Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña.</p>
-            <input type="email" class="Correo" name="Correo" placeholder="Correo electrónico" required />
-            <!--<button class="btn BotonRestablecer">Restablecer contraseña</button>-->
-            <button class="btn BotonRestablecer" onclick="location.href='olvidastetucontrasena2.html'">Restablecer contraseña</button>
+        <div class="CajaContrasenaActualizada">
+            <h2 class="TituloExito">¡Contraseña actualizada con éxito!</h2>
+            <p class="MensajeConfirmacion">Tu contraseña ha sido restablecida correctamente.</p>
+            <p class="MensajeInstruccion">Ya puedes iniciar sesión con tus nuevas credenciales.</p>
             <button class="btn BotonIniciarSesion" onclick="location.href='iniciarsesión.html'">Iniciar sesión</button>
         </div>
     </main>

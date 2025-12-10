@@ -1,0 +1,183 @@
+﻿.CajaRegistro {
+    width: 700px;
+    margin: 20px auto;
+    padding: 35px 35px;
+    background: #c8e6c9;
+    border-radius: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.05);
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.06), 0 8px 20px rgba(5, 150, 105, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.TituloRegistro {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+/* Contenedor de inputs en fila */
+.FilaInputs {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Inputs de ancho completo */
+.InputCompleto {
+    width: 100%;
+    padding: 18px 18px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    color: #000000;
+    background-color: #f1f8f4;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Inputs de mitad de ancho */
+.InputMitad {
+    width: 100%;
+    padding: 18px 18px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    color: #000000;
+    background-color: #f1f8f4;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+    /* Placeholder */
+    .InputCompleto::placeholder,
+    .InputMitad::placeholder {
+        color: #9ca3af;
+    }
+
+    .InputMitad:focus,
+    .InputCompleto:focus {
+        background-color: #ffffff;
+        box-shadow: 0 0 0 2px #2e7d32;
+    }
+
+/* Select de tipo de documento */
+select.InputMitad {
+    width: 100%;
+    padding: 18px 18px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    color: #000000;
+    background-color: #f1f8f4;
+    font-size: 1rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    appearance: none; /* Quita el estilo por defecto del navegador */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23374151' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    padding-right: 40px;
+}
+
+    /* Opción placeholder deshabilitada */
+    select.InputMitad option[disabled] {
+        color: #9ca3af;
+    }
+
+    /* Hover del select */
+    select.InputMitad:hover {
+        background-color: #e8f5e9;
+    }
+
+    /* Focus del select */
+    select.InputMitad:focus {
+        background-color: #ffffff;
+        box-shadow: 0 0 0 2px #2e7d32;
+    }
+
+/* Título de selección */
+.TituloSeleccion {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Contenedor de opciones de rol */
+.OpcionesRol {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Botones de opción de rol */
+.OpcionRol {
+    flex: 1;
+    padding: 18px 15px;
+    border-radius: 14px;
+    border: 2px solid #2e7d32;
+    background-color: #f1f8f4;
+    color: #000000;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+    .OpcionRol .Icono {
+        font-size: 1.5rem;
+    }
+
+    .OpcionRol:hover {
+        background-color: rgba(46, 125, 50, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .OpcionRol.activo {
+        background-color: #2e7d32;
+        color: white;
+    }
+
+/* Botón principal de registrarse */
+.BotonRegistrarse {
+    width: 100%;
+    padding: 18px;
+    border-radius: 14px;
+    background-color: #2e7d32;
+    color: white;
+    font-weight: 600;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+    .BotonRegistrarse:hover {
+        background-color: #00cc44;
+    }
+
+/* Responsive */
+@media (max-width: 650px) {
+    .CajaRegistro {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .FilaInputs {
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .OpcionesRol {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

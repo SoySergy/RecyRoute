@@ -1,0 +1,13 @@
+﻿.EncabezadoPrincipal {
+    display: flex; /* Alinea todo en una fila */
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Espacia logo a la izquierda y botones a la derecha */
+    padding: 20px 40px; /* Espaciado interno */
+    background-color: none; /* Color de fondo suave */
+}
+
+/* Contenedor que agrupa los botones hacia la derecha */
+.ContenedorBotones {
+    display: flex; /* Pone los botones en línea */
+    gap: 16px; /* Espaciado entre botones */
+}

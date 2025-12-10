@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>RecyRoute</title>
@@ -9,25 +10,38 @@
     <link rel="stylesheet" href="../Recursos/Css/Global/base.css" />
     <link rel="stylesheet" href="../Recursos/Css/Global/tipografia.css" />
     <link rel="stylesheet" href="../Recursos/Css/Global/encabezadosecundario.css" />
+
     <!-- Componentes -->
     <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css" />
     <link rel="stylesheet" href="../Recursos/Css/Componentes/formularios.css" />
+
     <!-- Página específica -->
-    <link rel="stylesheet" href="../Recursos/Css/Paginas/olvidastetucontrasena.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/iniciarsesión.css" />
+
 </head>
+
 <body>
+
     <header class="EncabezadoSecundario">
         <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
     </header>
+
     <main>
-        <div class="CajaRecuperarContrasena">
-            <h2 class="TituloRecuperar">¿Olvidaste tu contraseña?</h2>
-            <p class="MensajeInstrucciones">Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña.</p>
-            <input type="email" class="Correo" name="Correo" placeholder="Correo electrónico" required />
-            <!--<button class="btn BotonRestablecer">Restablecer contraseña</button>-->
-            <button class="btn BotonRestablecer" onclick="location.href='olvidastetucontrasena2.html'">Restablecer contraseña</button>
-            <button class="btn BotonIniciarSesion" onclick="location.href='iniciarsesión.html'">Iniciar sesión</button>
+        <div class="CajaIniciarSesión">
+            <h2 class="IniciarSesión">Iniciar sesión</h2>
+
+            <input type="email" class="Correo" name="Correo" placeholder="Correo electronico" required />
+            <input type="password" class="Contraseña" name="Contraseña" placeholder="Contraseña" required />
+
+            <button class="btn BotonIniciarSesion" onclick="location.href='pantallaprincipalciudadano.html'">Iniciar sesión</button>
+
+            <h3> <a href="olvidastetucontrasena.html">¿Olvidaste tu contraseña?</a> </h3>
+
+            <button class="btn BotonRegistrarse" onclick="location.href='registrarse.html'">Registrarse</button>
         </div>
+
     </main>
+
 </body>
+
 </html>

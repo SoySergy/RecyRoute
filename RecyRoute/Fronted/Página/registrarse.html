@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RecyRoute</title>
+    <link rel="icon" href="../Recursos/Iconos/Head/logorecyroute.svg" />
+    <!--CSS-->
+    <!-- Globales -->
+    <link rel="stylesheet" href="../Recursos/Css/Global/base.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/tipografia.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/encabezadosecundario.css" />
+    <!-- Componentes -->
+    <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Componentes/formularios.css" />
+    <!-- Página específica -->
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/registrarse.css" />
+</head>
+<body>
+    <header class="EncabezadoSecundario">
+        <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
+    </header>
+    <main>
+        <div class="CajaRegistro">
+            <h2 class="TituloRegistro">Crea una cuenta</h2>
+
+            <div class="FilaInputs">
+                <input type="text" class="InputMitad" name="Nombre" placeholder="Nombre" required />
+                <input type="text" class="InputMitad" name="Apellido" placeholder="Apellido" required />
+            </div>
+
+            <div class="FilaInputs">
+                <select class="InputMitad" name="TipoDocumento" required>
+                    <option value="" disabled selected>Tipo de documento</option>
+                    <option value="Cedula_Ciudadania">Cédula de Ciudadanía</option>
+                    <option value="Cedula_Extranjeria">Cédula de Extranjería</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+                <input type="text" class="InputMitad" name="NumeroDocumento" placeholder="Número de documento" required />
+            </div>
+
+            <input type="text" class="InputCompleto" name="Direccion" placeholder="Dirección de residencia" required />
+
+            <div class="FilaInputs">
+                <input type="tel" class="InputMitad" name="Telefono" placeholder="Número de teléfono" required />
+                <input type="email" class="InputMitad" name="Correo" placeholder="Correo electrónico" required />
+            </div>
+
+            <input type="password" class="InputCompleto" name="Contraseña" placeholder="Contraseña" required />
+
+            <h3 class="TituloSeleccion">Selecciona</h3>
+
+            <div class="OpcionesRol">
+                <button type="button" class="OpcionRol" id="OpcionCiudadano">
+                    <span class="Icono">♻️</span> Ciudadano - Quiero reciclar
+                </button>
+                <button type="button" class="OpcionRol" id="OpcionGestor">
+                    <span class="Icono">🏢</span> Gestor Ambiental - Quiero recoger reciclaje
+                </button>
+            </div>
+
+            <button class="btn BotonRegistrarse" onclick="location.href='registroexistoso.html'">Registrarse</button>
+
+        </div>
+    </main>
+</body>
+</html>

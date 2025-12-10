@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RecyRoute</title>
+    <link rel="icon" href="../Recursos/Iconos/Head/logorecyroute.svg" />
+ 
+    <link rel="stylesheet" href="../Recursos/Css/Global/encabezadousuario.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/configuracion.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/tipografia.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/base.css" />
+
+</head>
+<body>
+
+    <header class="EncabezadoPrincipal">
+        <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
+        <div class="ContenedorIconos">
+            <a class="IconoMensaje" href="chat.html"><img src="../Recursos/Iconos/Head/mensaje.svg" alt="IconoMensaje"></a>
+            <a class="IconoNotificacion" href="notificacion.html"><img src="../Recursos/Iconos/Head/notificaciones.svg" alt="IconoNotificacion"></a>
+            <a class="IconoUsuario" href="configuracion.html"><img src="../Recursos/Iconos/Head/usuario.svg" alt="IconoUsuario"></a>
+            <a class="NombreUsuario" href="configuracion.html"><h2>Usuario</h2></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="ContenedorPrincipal">
+            <div class="CajaConfiguracion">
+                <div class="EncabezadoConfiguracion">
+                    <h2 class="TituloConfiguracion">Configuración del Perfil</h2>
+                    <button class="BotonVolver" onclick="location.href='pantallaprincipalciudadano.html'">
+                         <!--ICONO DE CASA - Botón Volver--> 
+                        <img class="IconoCasaVolver" src="../Recursos/Iconos/Head/inicio.svg" alt="IconoCasa">
+                        <span class="TextoVolver">Volver</span>
+                    </button>
+                </div>
+
+                <div class="ListaOpciones">
+                    <button class="OpcionConfiguracion" onclick="location.href='configuracionperfil.html'">
+                        <div class="ContenidoOpcion">
+                            <div class="IconoTexto">
+                                 <!--ICONO DE PERFIL/USUARIO - Opción Perfil--> 
+                                <img class="IconoPerfilOpcion" src="../Recursos/Iconos/Head/usuario.svg" alt="IconoPerfil">
+
+                                <div class="TextoOpcion">
+                                    <h3 class="TituloOpcion">Perfil</h3>
+                                    <p class="DescripcionOpcion">Nombre, apellido, dirección, teléfono y correo</p>
+                                </div>
+                            </div>
+                             <!--ICONO DE FLECHA DERECHA - Opción Perfil--> 
+                            <img class="IconoFlechaPerfil" src="../Recursos/Iconos/Head/flechaabajo.svg" alt="IconoFlecha">
+                        </div>
+                    </button>
+
+                     <!--Opción Seguridad--> 
+                    <button class="OpcionConfiguracion" onclick="location.href='configuracionseguridad.html'">
+                        <div class="ContenidoOpcion">
+                            <div class="IconoTexto">
+                                 <!--ICONO DE CANDADO/SEGURIDAD - Opción Seguridad--> 
+                                <img class="IconoCandadoOpcion" src="../Recursos/Iconos/Head/candado.svg" alt="IconoCandado">
+                                <div class="TextoOpcion">
+                                    <h3 class="TituloOpcion">Seguridad</h3>
+                                    <p class="DescripcionOpcion">Cambiar contraseña</p>
+                                </div>
+                            </div>
+                             <!--ICONO DE FLECHA DERECHA - Opción Seguridad--> 
+                            <img class="IconoFlechaSeguridad" src="../Recursos/Iconos/Head/flechaabajo.svg" alt="IconoFlecha">
+                        </div>
+                    </button>
+
+                     <!--Opción Cerrar Sesión--> 
+                    <button class="OpcionConfiguracion OpcionCerrarSesion" onclick="location.href='index.html'">
+                        <div class="ContenidoOpcion">
+                            <div class="IconoTexto">
+                                 <!--ICONO DE CERRAR SESIÓN - Opción Cerrar Sesión--> 
+                                <img class="IconoSalirOpcion" src="../Recursos/Iconos/Head/salir.svg" alt="IconoSalir">
+                                <div class="TextoOpcion">
+                                    <h3 class="TituloOpcion">Cerrar sesión</h3>
+                                </div>
+                            </div>
+                             <!--ICONO DE FLECHA DERECHA - Opción Cerrar Sesión--> 
+                            <img class="IconoFlechaSalir" src="../Recursos/Iconos/Head/flechaabajo.svg" alt="IconoFlecha">
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

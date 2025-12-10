@@ -1,0 +1,296 @@
+﻿/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+.ContenedorPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 0px;
+}
+
+/* ========================================
+   CAJA DE CONFIGURACIÓN
+   ======================================== */
+.CajaConfiguracion {
+    width: 500px;
+    margin: 1px auto;
+    padding: 35px 35px;
+    background: #c8e6c9;
+    border-radius: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.05);
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.06), 0 8px 20px rgba(5, 150, 105, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   ENCABEZADO DE CONFIGURACIÓN
+   ======================================== */
+.EncabezadoConfiguracion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.TituloConfiguracion {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+}
+
+/* ========================================
+   BOTÓN VOLVER
+   ======================================== */
+.BotonVolver {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 1px solid #2e7d32;
+    border-radius: 8px;
+    background-color: white;
+    color: #2e7d32;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+    text-decoration: none;
+}
+
+    .BotonVolver:hover {
+        transform: scale(1.05);
+        background-color: #2e7d32;
+        color: white;
+    }
+
+        .BotonVolver:hover .IconoCasaVolver {
+            filter: brightness(0) invert(1);
+        }
+
+.TextoVolver {
+    text-decoration: none;
+}
+
+/* Icono de Casa en Botón Volver */
+.IconoCasaVolver {
+    width: 18px;
+    height: 18px;
+    transition: filter 0.25s ease;
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+}
+
+/* ========================================
+   LISTA DE OPCIONES
+   ======================================== */
+.ListaOpciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ========================================
+   OPCIONES DE CONFIGURACIÓN
+   ======================================== */
+.OpcionConfiguracion {
+    width: 100%;
+    padding: 18px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+    .OpcionConfiguracion:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+    }
+
+/* ========================================
+   CONTENIDO DE LAS OPCIONES
+   ======================================== */
+.ContenidoOpcion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.IconoTexto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ========================================
+   ICONOS PRINCIPALES DE CADA OPCIÓN
+   ======================================== */
+
+/* Icono de Perfil en Opción Perfil */
+.IconoPerfilOpcion {
+    width: 32px;
+    height: 32px;
+    transition: filter 0.25s ease;
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+}
+
+/* Icono de Candado en Opción Seguridad */
+.IconoCandadoOpcion {
+    width: 32px;
+    height: 32px;
+    transition: filter 0.25s ease;
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+}
+
+/* Icono de Salir en Opción Cerrar Sesión */
+.IconoSalirOpcion {
+    width: 32px;
+    height: 32px;
+    transition: filter 0.25s ease;
+    filter: invert(37%) sepia(94%) saturate(1753%) hue-rotate(194deg) brightness(91%);
+}
+
+/* Hover para los iconos principales */
+.OpcionConfiguracion:hover .IconoPerfilOpcion,
+.OpcionConfiguracion:hover .IconoCandadoOpcion {
+/*    filter: invert(20%) sepia(45%) saturate(2450%) hue-rotate(95deg) brightness(70%);*/
+    filter: invert(35%) sepia(45%) saturate(1200%) hue-rotate(95deg) brightness(85%);
+}
+
+.OpcionCerrarSesion:hover .IconoSalirOpcion {
+    filter: invert(30%) sepia(94%) saturate(2753%) hue-rotate(194deg) brightness(85%);
+}
+
+/* ========================================
+   ICONOS DE FLECHAS (LADO DERECHO)
+   ======================================== */
+
+/* Flecha en Opción Perfil */
+.IconoFlechaPerfil {
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    transition: filter 0.25s ease;
+    filter: invert(35%) sepia(45%) saturate(1200%) hue-rotate(95deg) brightness(85%);
+}
+
+/* Flecha en Opción Seguridad */
+.IconoFlechaSeguridad {
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    transition: filter 0.25s ease;
+    filter: invert(35%) sepia(45%) saturate(1200%) hue-rotate(95deg) brightness(85%);
+}
+
+/* Flecha en Opción Cerrar Sesión */
+.IconoFlechaSalir {
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    transition: filter 0.25s ease;
+    filter: invert(37%) sepia(94%) saturate(1753%) hue-rotate(194deg) brightness(91%);
+}
+
+/* Hover para las flechas */
+.OpcionConfiguracion:hover .IconoFlechaPerfil,
+.OpcionConfiguracion:hover .IconoFlechaSeguridad{
+    filter: invert(35%) sepia(45%) saturate(1200%) hue-rotate(95deg) brightness(85%);
+}
+
+.OpcionCerrarSesion:hover .IconoFlechaSalir {
+    filter: invert(37%) sepia(94%) saturate(1753%) hue-rotate(194deg) brightness(91%);
+}
+
+
+/* ========================================
+   TEXTO DE LAS OPCIONES
+   ======================================== */
+.TextoOpcion {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.TituloOpcion {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+}
+
+.DescripcionOpcion {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    color: #616161;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ========================================
+   OPCIÓN CERRAR SESIÓN (Estilo especial)
+   ======================================== */
+.OpcionCerrarSesion .TituloOpcion {
+    color: #1976d2;
+}
+
+.OpcionCerrarSesion:hover {
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.15);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 600px) {
+    .CajaConfiguracion {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .TituloConfiguracion {
+        font-size: 20px;
+    }
+
+    .BotonVolver {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .IconoCasaVolver {
+        width: 16px;
+        height: 16px;
+    }
+
+    .TituloOpcion {
+        font-size: 16px;
+    }
+
+    .DescripcionOpcion {
+        font-size: 13px;
+    }
+
+    .IconoPerfilOpcion,
+    .IconoCandadoOpcion,
+    .IconoSalirOpcion {
+        width: 28px;
+        height: 28px;
+    }
+
+    .IconoFlechaPerfil,
+    .IconoFlechaSeguridad,
+    .IconoFlechaSalir {
+        width: 18px;
+        height: 18px;
+    }
+}
