@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RecyRoute</title>
+    <link rel="icon" href="../Recursos/Iconos/Head/logorecyroute.svg" />
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="../Recursos/Css/Global/reset.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/base.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/tipografia.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css" />
+
+    <!-- CSS específico de la página -->
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/solicitudenviada.css" />
+
+    <!-- CSS del Header Usuario - DEBE IR AL FINAL -->
+    <link rel="stylesheet" href="../Recursos/Css/Global/encabezadousuario.css" />
+</head>
+<body>
+    <header class="EncabezadoPrincipal">
+        <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
+        <div class="ContenedorIconos">
+            <a class="IconoMensaje" href="chat.html"><img src="../Recursos/Iconos/Head/mensaje.svg" alt="IconoMensaje"></a>
+            <a class="IconoNotificacion" href="notificacion.html"><img src="../Recursos/Iconos/Head/notificaciones.svg" alt="IconoNotificacion"></a>
+            <a class="IconoUsuario" href="configuracion.html"><img src="../Recursos/Iconos/Head/usuario.svg" alt="IconoUsuario"></a>
+            <a class="NombreUsuario" href="configuracion.html"><h2>Usuario</h2></a>
+        </div>
+    </header>
+
+    <main class="ContenedorPrincipal">
+        <div class="TarjetaConfirmacion">
+            <!-- Ícono de éxito -->
+            <div class="ContenedorIconoExito">
+                <svg class="IconoExito" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="#2e7d32" stroke-width="2" fill="none" />
+                    <path d="M8 12.5L10.5 15L16 9.5" stroke="#2e7d32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <!-- Título y mensaje -->
+            <h1 class="TituloConfirmacion">Solicitud Enviada</h1>
+            <p class="MensajeConfirmacion">Tu solicitud de recolección ha sido registrada con éxito.</p>
+
+            <!-- Detalles de la solicitud -->
+            <div class="TarjetaDetalles">
+                <h2 class="TituloDetalles">Detalles de tu solicitud</h2>
+                <div class="ListaDetalles">
+                    <div class="ItemDetalle">
+                        <span class="EtiquetaDetalle">Fecha de recolección:</span>
+                        <span class="ValorDetalle">27/09/2025</span>
+                    </div>
+                    <div class="ItemDetalle">
+                        <span class="EtiquetaDetalle">Horario:</span>
+                        <span class="ValorDetalle">8:00 - 10:00</span>
+                    </div>
+                    <div class="ItemDetalle">
+                        <span class="EtiquetaDetalle">Materiales:</span>
+                        <span class="ValorDetalle">Papel, Plástico, Vidrio</span>
+                    </div>
+                    <div class="ItemDetalle">
+                        <span class="EtiquetaDetalle">Dirección:</span>
+                        <span class="ValorDetalle">Calle 56 88 h 15 SUR</span>
+                    </div>
+                    <div class="ItemDetalle">
+                        <span class="EtiquetaDetalle">Teléfono:</span>
+                        <span class="ValorDetalle">+57 300 123 4567</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="ContenedorBotones">
+                <a href="detallesolicitud.html" class="btn BotonSecundario">Ver mis solicitudes</a>
+                <a href="pantallaprincipalciudadano.html" class="btn BotonPrimario">Volver al inicio</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,456 @@
+﻿/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+.ContenedorPrincipal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px 30px;
+    min-height: calc(100vh - 100px);
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   SECCIÓN IZQUIERDA - SOLICITUDES PENDIENTES
+   ======================================== */
+.SeccionIzquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.TarjetaSolicitudesPendientes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.TituloSeccion {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+}
+
+.TituloHistorial {
+    margin-top: 10px;
+}
+
+/* ========================================
+   TARJETA DE SOLICITUD INDIVIDUAL
+   ======================================== */
+.TarjetaSolicitud {
+    background: #c8e6c9;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(16, 185, 129, 0.05);
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.06), 0 8px 20px rgba(5, 150, 105, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transition: all 0.3s ease;
+}
+
+    .TarjetaSolicitud:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 25px 70px rgba(16, 185, 129, 0.08), 0 10px 25px rgba(5, 150, 105, 0.06);
+    }
+
+.EncabezadoSolicitud {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NumeroSolicitud {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b5e20;
+}
+
+/* ========================================
+   DETALLES DE SOLICITUD
+   ======================================== */
+.DetallesSolicitud {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ItemDetalle {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: Poppins;
+    font-size: 15px;
+    color: #424242;
+}
+
+.IconoDetalle {
+    width: 20px;
+    height: 20px;
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.MaterialesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.EtiquetasMateriales {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.EtiquetaMaterial {
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 15px;
+    border: 1px solid #2e7d32;
+    background-color: white;
+    color: #2e7d32;
+}
+
+/* ========================================
+   SECCIÓN OBSERVACIONES
+   ======================================== */
+.SeccionObservaciones {
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.TituloObservaciones {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.TextoObservaciones {
+    font-family: Poppins;
+    font-size: 14px;
+    color: #5f6368;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ========================================
+   BOTONES DE ACCIÓN
+   ======================================== */
+.BotonesAccion {
+    display: flex;
+    gap: 10px;
+    padding-top: 8px;
+}
+
+.BotonAceptar,
+.BotonDetalles,
+.BotonIgnorar {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+}
+
+.BotonAceptar {
+    background-color: #2e7d32;
+    color: white;
+    flex: 1;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+}
+
+    .BotonAceptar:hover {
+        transform: scale(1.05);
+        background-color: #1b5e20;
+        box-shadow: 0 6px 16px rgba(46, 125, 50, 0.3);
+    }
+
+.BotonDetalles {
+    background-color: white;
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+
+    .BotonDetalles:hover {
+        transform: scale(1.05);
+        background-color: #f1f8f4;
+    }
+
+.BotonIgnorar {
+    background-color: white;
+    color: #757575;
+    border: 1px solid #e0e0e0;
+}
+
+    .BotonIgnorar:hover {
+        transform: scale(1.05);
+        background-color: #f5f5f5;
+    }
+
+.IconoBoton {
+    width: 16px;
+    height: 16px;
+    filter: invert(32%) sepia(53%) saturate(1447%) hue-rotate(88deg) brightness(91%) contrast(88%);
+}
+
+/* ========================================
+   SECCIÓN DERECHA
+   ======================================== */
+.SeccionDerecha {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ========================================
+   TARJETA RECOLECCIONES ACTIVAS
+   ======================================== */
+.TarjetaRecoleccionesActivas {
+    background: #c8e6c9;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(16, 185, 129, 0.05);
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.06), 0 8px 20px rgba(5, 150, 105, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.RecoleccionActiva {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.EstadoRecoleccion {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.EtiquetaEstado {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background-color: #2e7d32;
+    color: white;
+}
+
+.InfoCiudadano {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ========================================
+   BOTONES DE RECOLECCIÓN
+   ======================================== */
+.BotonesRecoleccion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 8px;
+}
+
+.BotonObservaciones {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid #2e7d32;
+    background-color: white;
+    color: #2e7d32;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    width: 100%;
+}
+
+    .BotonObservaciones:hover {
+        transform: scale(1.02);
+        background-color: #f1f8f4;
+    }
+
+.BotonesInferiores {
+    display: flex;
+    gap: 10px;
+}
+
+.BotonChat {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid #2e7d32;
+    background-color: white;
+    color: #2e7d32;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    flex: 1;
+}
+
+    .BotonChat:hover {
+        transform: scale(1.05);
+        background-color: #f1f8f4;
+    }
+
+.BotonCompletar {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #2e7d32;
+    color: white;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    flex: 1;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+}
+
+    .BotonCompletar:hover {
+        transform: scale(1.05);
+        background-color: #1b5e20;
+        box-shadow: 0 6px 16px rgba(46, 125, 50, 0.3);
+    }
+
+/* ========================================
+   TARJETA HISTORIAL
+   ======================================== */
+.TarjetaHistorial {
+    background: #c8e6c9;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(16, 185, 129, 0.05);
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.06), 0 8px 20px rgba(5, 150, 105, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.EncabezadoHistorial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.IconoHistorial {
+    width: 24px;
+    height: 24px;
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+}
+
+.BotonVerHistorial {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    background-color: transparent;
+    color: #2e7d32;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    width: 100%;
+}
+
+    .BotonVerHistorial:hover {
+        background-color: transparent !important;
+        color: #2e7d32 !important;
+        border-color: #2e7d32 !important;
+        transform: scale(1.05);
+    }
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1200px) {
+    .ContenedorPrincipal {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+    }
+
+    .SeccionIzquierda,
+    .SeccionDerecha {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .TarjetaSolicitud {
+        padding: 20px;
+    }
+
+    .BotonesAccion {
+        flex-direction: column;
+    }
+
+    .BotonAceptar,
+    .BotonDetalles,
+    .BotonIgnorar {
+        width: 100%;
+    }
+
+    .TituloSeccion {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ContenedorPrincipal {
+        padding: 15px 10px;
+        gap: 20px;
+    }
+
+    .TarjetaSolicitud,
+    .TarjetaRecoleccionesActivas,
+    .TarjetaHistorial {
+        padding: 15px;
+    }
+
+    .ItemDetalle {
+        font-size: 14px;
+    }
+
+    .NumeroSolicitud {
+        font-size: 16px;
+    }
+}

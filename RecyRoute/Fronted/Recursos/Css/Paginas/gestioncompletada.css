@@ -1,0 +1,313 @@
+﻿/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+.ContenedorPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    min-height: calc(100vh - 100px);
+    box-sizing: border-box;
+}
+
+/* ========================================
+   TARJETA PRINCIPAL DE RECOLECCIÓN COMPLETADA
+   ======================================== */
+.TarjetaCompletada {
+    background: #e8f5e9;
+    border-radius: 25px;
+    padding: 35px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.1), 0 8px 20px rgba(5, 150, 105, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.TituloCompletada {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1b5e20;
+    text-align: center;
+    margin: 0;
+}
+
+/* ========================================
+   TARJETA DE INFORMACIÓN DE SOLICITUD
+   ======================================== */
+.TarjetaInfoSolicitud {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px solid rgba(46, 125, 50, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.EncabezadoSolicitud {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(46, 125, 50, 0.2);
+}
+
+.NumeroSolicitud {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b5e20;
+}
+
+/* ========================================
+   CONTENIDO DIVIDIDO EN DOS COLUMNAS
+   ======================================== */
+.ContenidoDividido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.ColumnaIzquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ColumnaDerecha {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+   DETALLES DE SOLICITUD
+   ======================================== */
+.ItemDetalle {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: Poppins;
+    font-size: 15px;
+    color: #424242;
+}
+
+.IconoDetalle {
+    width: 20px;
+    height: 20px;
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ========================================
+   SECCIÓN OBSERVACIONES (DENTRO DE TARJETA)
+   ======================================== */
+.SeccionObservaciones {
+    background-color: #f1f8f4;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    border: 1px solid rgba(46, 125, 50, 0.2);
+}
+
+.TituloObservaciones {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.TextoObservaciones {
+    font-family: Poppins;
+    font-size: 14px;
+    color: #5f6368;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ========================================
+   TARJETA OBSERVACIONES PARA CIUDADANO
+   ======================================== */
+.TarjetaObservacionesCiudadano {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px solid rgba(46, 125, 50, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.TituloSeccion {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+}
+
+.ContenidoObservaciones {
+    background-color: #f1f8f4;
+    border: 1px solid rgba(46, 125, 50, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+    min-height: 80px;
+}
+
+.TextoObservacionesGestor {
+    font-family: Poppins;
+    font-size: 15px;
+    color: #424242;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ========================================
+   BOTONES DE ACCIÓN
+   ======================================== */
+.BotonesAccion {
+    display: flex;
+    gap: 12px;
+    padding-top: 5px;
+}
+
+.BotonVolver,
+.BotonHistorial {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.BotonVolver {
+    background-color: white;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+}
+
+    .BotonVolver:hover {
+        transform: scale(1.05);
+        background-color: #f1f8f4;
+        box-shadow: 0 6px 16px rgba(46, 125, 50, 0.2);
+    }
+
+.BotonHistorial {
+    background-color: white;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+}
+
+    .BotonHistorial:hover {
+        transform: scale(1.05);
+        background-color: #f1f8f4;
+        box-shadow: 0 6px 16px rgba(46, 125, 50, 0.2);
+    }
+
+.IconoBoton {
+    width: 18px;
+    height: 18px;
+    filter: invert(32%) sepia(53%) saturate(1447%) hue-rotate(88deg) brightness(91%) contrast(88%);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+    .ContenedorPrincipal {
+        padding: 20px 15px;
+    }
+
+    .TarjetaCompletada {
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .TituloCompletada {
+        font-size: 20px;
+    }
+
+    .TarjetaInfoSolicitud,
+    .TarjetaObservacionesCiudadano {
+        padding: 20px;
+    }
+
+    .ContenidoDividido {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .BotonesAccion {
+        flex-direction: column;
+    }
+
+    .BotonVolver,
+    .BotonHistorial {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .TarjetaCompletada {
+        padding: 20px;
+        gap: 18px;
+    }
+
+    .TituloCompletada {
+        font-size: 18px;
+    }
+
+    .TarjetaInfoSolicitud,
+    .TarjetaObservacionesCiudadano {
+        padding: 18px;
+    }
+
+    .NumeroSolicitud {
+        font-size: 16px;
+    }
+
+    .TituloSeccion {
+        font-size: 16px;
+    }
+
+    .ItemDetalle {
+        font-size: 14px;
+    }
+
+    .BotonVolver,
+    .BotonHistorial {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+}

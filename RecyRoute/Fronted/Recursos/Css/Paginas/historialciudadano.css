@@ -1,0 +1,343 @@
+﻿/* Contenedor principal */
+.ContenedorHistorial {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ========== CABECERA ========== */
+.CabeceraHistorial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.TituloConIcono {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+    /* Estilos para el icono de calendario en la cabecera */
+    .TituloConIcono svg,
+    .TituloConIcono img {
+        width: 40px;
+        height: 40px;
+        color: #2e7d32;
+        filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+    }
+
+.TituloPrincipal {
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #2e7d32;
+    margin: 0;
+}
+
+.BotonVolver {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(46,125,50,0.2);
+    transition: all 0.2s ease;
+}
+
+    .BotonVolver svg,
+    .BotonVolver img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) invert(1);
+    }
+
+    .BotonVolver:hover {
+        background-color: #00cc44;
+        transform: translateY(-2px);
+    }
+
+/* ========== BARRA DE BÚSQUEDA ========== */
+.BarraBusqueda {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+}
+
+    /* Icono de lupa */
+    .BarraBusqueda svg:first-child,
+    .BarraBusqueda img:first-child {
+        width: 20px;
+        height: 20px;
+        color: #2e7d32;
+        filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+        flex-shrink: 0;
+    }
+
+.InputBusqueda {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    color: #424242;
+}
+
+    .InputBusqueda::placeholder {
+        color: #9e9e9e;
+    }
+
+/* Icono de menú/opciones */
+.BarraBusqueda svg:last-child,
+.BarraBusqueda img:last-child {
+    width: 24px;
+    height: 24px;
+    color: #2e7d32;
+    filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* ========== LISTA DE SOLICITUDES ========== */
+.ListaSolicitudes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ========== TARJETA DE SOLICITUD ========== */
+.TarjetaSolicitud {
+    background: #e8f5e9;
+    border-radius: 16px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .TarjetaSolicitud:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(46,125,50,0.15);
+    }
+
+/* ========== COLUMNA IZQUIERDA ========== */
+.ColumnaIzquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.NumeroSolicitud {
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0 0 8px 0;
+}
+
+.InfoFila {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    /* Iconos de información (calendario, reloj, ubicación, etc.) */
+    .InfoFila svg,
+    .InfoFila img {
+        width: 20px;
+        height: 20px;
+        color: #2e7d32;
+        filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+        flex-shrink: 0;
+    }
+
+.TextoInfo {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #424242;
+    line-height: 1.5;
+}
+
+    .TextoInfo strong {
+        color: #1b5e20;
+        font-weight: 600;
+    }
+
+/* Badge de estado */
+.BadgeEstado {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+    .BadgeEstado.Completada {
+        background-color: #c8e6c9;
+        color: #1b5e20;
+    }
+
+    .BadgeEstado.Pendiente {
+        background-color: #fff3e0;
+        color: #f57c00;
+    }
+
+    .BadgeEstado.Rechazada {
+        background-color: #ffcdd2;
+        color: #c62828;
+    }
+
+/* ========== COLUMNA DERECHA ========== */
+.ColumnaDerecha {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ========== SECCIÓN OBSERVACIONES ========== */
+.SeccionObservaciones {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.TituloSeccion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+    .TituloSeccion svg,
+    .TituloSeccion img {
+        width: 20px;
+        height: 20px;
+        color: #2e7d32;
+        filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+        flex-shrink: 0;
+    }
+
+    .TituloSeccion h4 {
+        font-family: Poppins, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: #1b5e20;
+        margin: 0;
+    }
+
+.TextoObservaciones {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #616161;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ========== SECCIÓN GESTOR ========== */
+.SeccionGestor {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.TituloGestor {
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1b5e20;
+
+    margin: 0 0 12px 0;
+}
+
+.InfoGestorFila {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+    .InfoGestorFila:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Iconos del gestor (usuario, teléfono, chat) - color azul */
+    .InfoGestorFila svg,
+    .InfoGestorFila img {
+        width: 20px;
+        height: 20px;
+        color: #1976d2;
+        flex-shrink: 0;
+        filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+    }
+
+.TextoGestor {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #424242;
+}
+
+.LinkChat {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #424242;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+    .LinkChat:hover {
+        filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+        text-decoration: none;
+    }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .TarjetaSolicitud {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .ContenedorHistorial {
+        padding: 0 15px;
+    }
+
+    .CabeceraHistorial {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .BotonVolver {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .TituloPrincipal {
+        font-size: 24px;
+    }
+
+    .TarjetaSolicitud {
+        padding: 18px;
+    }
+
+    .NumeroSolicitud {
+        font-size: 18px;
+    }
+}
