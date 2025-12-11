@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Historial de Solicitudes - RecyRoute</title>
+    <link rel="icon" href="../Recursos/Iconos/Head/logorecyroute.svg" />
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="../Recursos/Css/Global/reset.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/base.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/tipografia.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css" />
+
+    <!-- CSS específico de la página -->
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/historialciudadano.css" />
+
+    <!-- CSS del Header Usuario - DEBE IR AL FINAL -->
+    <link rel="stylesheet" href="../Recursos/Css/Global/encabezadousuario.css" />
+</head>
+<body>
+    <header class="EncabezadoPrincipal">
+        <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
+        <div class="ContenedorIconos">
+            <a class="IconoMensaje" href="chat.html"><img src="../Recursos/Iconos/Head/mensaje.svg" alt="IconoMensaje"></a>
+            <a class="IconoNotificacion" href="notificacion.html"><img src="../Recursos/Iconos/Head/notificaciones.svg" alt="IconoNotificacion"></a>
+            <a class="IconoUsuario" href="configuracion.html"><img src="../Recursos/Iconos/Head/usuario.svg" alt="IconoUsuario"></a>
+            <a class="NombreUsuario" href="configuracion.html"><h2>Usuario</h2></a>
+        </div>
+    </header>
+
+    <main class="ContenedorPrincipal">
+        <div class="ContenedorHistorial">
+            <!-- Cabecera con título y botón volver -->
+            <div class="CabeceraHistorial">
+                <div class="TituloConIcono">
+                    <!-- ICONO: Calendario verde (40x40) -->
+                    <img class="IconoCalendarioHeader" src="../Recursos/Iconos/Head/calendario.svg" alt="Calendario">
+                    <h1 class="TituloPrincipal">Historial de Solicitudes</h1>
+                </div>
+                <a href="index.html" class="btn BotonVolver">
+                    <!-- ICONO: Casa blanca (20x20) -->
+                    <img src="../Recursos/Iconos/Head/inicio.svg" alt="Volver">
+                    Volver
+                </a>
+            </div>
+
+            <!-- Barra de búsqueda -->
+            <div class="BarraBusqueda">
+                <!-- ICONO: Lupa verde (20x20) -->
+                <img class="IconoBusqueda" src="../Recursos/Iconos/Head/busqueda.svg" alt="Buscar">
+                <input type="text" class="InputBusqueda" placeholder="Buscar por fecha, estado o material">
+                <!-- ICONO: Tres líneas horizontales verde (24x24) - menú opciones -->
+                <img class="IconoOpciones" src="../Recursos/Iconos/Head/menu.svg" alt="Opciones">
+            </div>
+
+            <!-- Lista de solicitudes -->
+            <div class="ListaSolicitudes">
+                <!-- Tarjeta de solicitud 2 -->
+                <div class="TarjetaSolicitud">
+                    <div class="ColumnaIzquierda">
+                        <h3 class="NumeroSolicitud">Solicitud 2</h3>
+
+                        <div class="InfoFila">
+                            <!-- ICONO: Calendario verde (20x20) -->
+                            <img class="IconoInfo" src="../Recursos/Iconos/Head/calendario.svg" alt="Fecha">
+                            <span class="TextoInfo"><strong>Fecha:</strong> 27/09/2025</span>
+                        </div>
+
+                        <div class="InfoFila">
+                            <!-- ICONO: Reloj verde (20x20) -->
+                            <img class="IconoInfo" src="../Recursos/Iconos/Head/reloj.svg" alt="Horario">
+                            <span class="TextoInfo"><strong>Horario:</strong> 08:00 - 10:00</span>
+                        </div>
+
+                        <div class="InfoFila">
+                            <!-- ICONO: Caja/Paquete verde (20x20) -->
+                            <img class="IconoInfo" src="../Recursos/Iconos/Head/caja.svg" alt="Materiales">
+                            <span class="TextoInfo"><strong>Materiales:</strong> Papel, Metal</span>
+                        </div>
+
+                        <div class="InfoFila">
+                            <!-- ICONO: Pin de ubicación verde (20x20) -->
+                            <img class="IconoInfo" src="../Recursos/Iconos/Head/direccion.svg" alt="Dirección">
+                            <span class="TextoInfo"><strong>Dirección:</strong> Calle 15 # 56 - 98</span>
+                        </div>
+
+                        <div class="InfoFila">
+                            <!-- ICONO: Check/Palomita verde (20x20) -->
+                            <img class="IconoInfo" src="../Recursos/Iconos/Head/chulo.svg" alt="Estado">
+                            <span class="BadgeEstado Completada">Estado: Completada</span>
+                        </div>
+                    </div>
+
+                    <div class="ColumnaDerecha">
+                        <div class="SeccionObservaciones">
+                            <div class="TituloSeccion">
+                                <!-- ICONO: Globo de texto/mensaje verde (20x20) -->
+                                <img class="IconoSeccion" src="../Recursos/Iconos/Head/observacion.svg" alt="Observaciones">
+                                <h4>Observaciones</h4>
+                            </div>
+                            <p class="TextoObservaciones">Voy a entregar varios libros viejos además de papel suelto</p>
+                        </div>
+
+                        <div class="SeccionGestor">
+                            <h4 class="TituloGestor">Gestor</h4>
+
+                            <div class="InfoGestorFila">
+                                <!-- ICONO: Usuario/Persona azul (20x20) -->
+                                <img class="IconoGestor" src="../Recursos/Iconos/Head/usuario.svg" alt="Gestor">
+                                <span class="TextoGestor">Juan Pérez</span>
+                            </div>
+
+                            <div class="InfoGestorFila">
+                                <!-- ICONO: Teléfono azul (20x20) -->
+                                <img class="IconoGestor" src="../Recursos/Iconos/Head/telefono.svg" alt="Teléfono">
+                                <span class="TextoGestor">+57 300 123 4567</span>
+                            </div>
+
+                            <div class="InfoGestorFila">
+                                <!-- ICONO: Chat/Mensaje azul (20x20) -->
+                                <img class="IconoGestor" src="../Recursos/Iconos/Head/mensaje.svg" alt="Chat">
+                                <a href="chat.html" class="LinkChat">Historial de chat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de solicitud 1 -->
+                <div class="TarjetaSolicitud">
+                    <div class="ColumnaIzquierda">
+                        <h3 class="NumeroSolicitud">Solicitud 1</h3>
+
+                        <div class="InfoFila">
+                            <!-- ICONO: Calendario verde (20x20) -->
+                            <img class="IconoInfo" src="../Recursos/Iconos/Head/calendario.svg" alt="Fecha">
+                            <span class="TextoInfo"><strong>Fecha:</strong> 27/09/2025</span>
+                        </div>
+
+                        <div class="InfoFila">
+                            <!-- ICONO: Reloj verde (20x20) -->
+                            <img class="IconoInfo" src="../Recursos/Iconos/Head/reloj.svg" alt="Horario">
+                            <span class="TextoInfo"><strong>Horario:</strong> 08:00 - 10:00</span>
+                        </div>
+
+                        <div class="InfoFila">
+                            <!-- ICONO: Caja/Paquete verde (20x20) -->
+                            <img class="IconoInfo" src="../Recursos/Iconos/Head/caja.svg" alt="Materiales">
+                            <span class="TextoInfo"><strong>Materiales:</strong> Papel, Metal</span>
+                        </div>
+
+                        <div class="InfoFila">
+                            <!-- ICONO: Pin de ubicación verde (20x20) -->
+                            <img class="IconoInfo" src="../Recursos/Iconos/Head/direccion.svg" alt="Dirección">
+                            <span class="TextoInfo"><strong>Dirección:</strong> Calle 15 # 56 - 98</span>
+                        </div>
+
+                        <div class="InfoFila">
+                            <!-- ICONO: Check/Palomita verde (20x20) -->
+                            <img class="IconoInfo" src="../Recursos/Iconos/Head/chulo.svg" alt="Estado">
+                            <span class="BadgeEstado Completada">Estado: Completada</span>
+                        </div>
+                    </div>
+
+                    <div class="ColumnaDerecha">
+                        <div class="SeccionObservaciones">
+                            <div class="TituloSeccion">
+                                <!-- ICONO: Globo de texto/mensaje verde (20x20) -->
+                                <img class="IconoSeccion" src="../Recursos/Iconos/Head/observacion.svg" alt="Observaciones">
+                                <h4>Observaciones</h4>
+                            </div>
+                            <p class="TextoObservaciones">Voy a entregar varios libros viejos además de papel suelto</p>
+                        </div>
+
+                        <div class="SeccionGestor">
+                            <h4 class="TituloGestor">Gestor</h4>
+
+                            <div class="InfoGestorFila">
+                                <!-- ICONO: Usuario/Persona azul (20x20) -->
+                                <img class="IconoGestor" src="../Recursos/Iconos/Head/usuario.svg" alt="Gestor">
+                                <span class="TextoGestor">Juan Pérez</span>
+                            </div>
+
+                            <div class="InfoGestorFila">
+                                <!-- ICONO: Teléfono azul (20x20) -->
+                                <img class="IconoGestor" src="../Recursos/Iconos/Head/telefono.svg" alt="Teléfono">
+                                <span class="TextoGestor">+57 300 123 4567</span>
+                            </div>
+
+                            <div class="InfoGestorFila">
+                                <!-- ICONO: Chat/Mensaje azul (20x20) -->
+                                <img class="IconoGestor" src="../Recursos/Iconos/Head/mensaje.svg" alt="Chat">
+                                <a href="chat.html" class="LinkChat">Historial de chat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

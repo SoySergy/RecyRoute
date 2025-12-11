@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="../Recursos/Css/Global/tipografia.css" />
     <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css" />
 
+    <!-- CSS específico de la página -->
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/chat.css" />
+
     <!-- CSS del Header Usuario - DEBE IR AL FINAL -->
     <link rel="stylesheet" href="../Recursos/Css/Global/encabezadousuario.css" />
 </head>
@@ -22,14 +25,80 @@
             <a class="IconoNotificacion" href="notificacion.html"><img src="../Recursos/Iconos/Head/notificaciones.svg" alt="IconoNotificacion"></a>
             <a class="IconoUsuario" href="configuracion.html"><img src="../Recursos/Iconos/Head/usuario.svg" alt="IconoUsuario"></a>
             <a class="NombreUsuario" href="configuracion.html"><h2>Usuario</h2></a>
-
         </div>
     </header>
 
+    <main class="ContenedorPrincipal">
+        <div class="ContenedorChat">
+            <!-- Botón Volver -->
+            <!--<a href="historialsolicitudes.html" class="btn BotonVolverChat">-->
+                <!-- ICONO: Casa verde (20x20) -->
+                <!--<img src="../Recursos/Iconos/Head/inicio.svg" alt="Volver">
+                Volver
+            </a>-->
 
+            <!-- Área de mensajes -->
+            <div class="AreaMensajes">
+                <!-- Mensaje recibido 1 -->
+                <div class="MensajeRecibido">
+                    <div class="ContenidoMensajeIzq">
+                        <!-- ICONO: Usuario azul círculo (40x40) -->
+                        <img class="IconoUsuarioIzq" src="../Recursos/Iconos/Head/usuario.svg" alt="Usuario">
+                        <div class="BurbujaMensajeRecibido">
+                            <p>¡Hola! Soy María González, tu gestora ambiental asignada.</p>
+                        </div>
+                    </div>
+                    <span class="HoraMensajeIzq">10:15</span>
+                </div>
 
-    <main>
-        <!-- Contenido principal -->
+                <!-- Mensaje enviado 1 -->
+                <div class="MensajeEnviado">
+                    <span class="HoraMensajeDer">10:15</span>
+                    <div class="ContenidoMensajeDer">
+                        <div class="BurbujaMensajeEnviado">
+                            <p>¡Hola! Soy Sergio.</p>
+                        </div>
+                        <!-- ICONO: Usuario verde círculo (40x40) -->
+                        <img class="IconoUsuarioDer" src="../Recursos/Iconos/Head/usuario.svg" alt="Tú">
+                    </div>
+                </div>
+
+                <!-- Mensaje recibido 2 -->
+                <div class="MensajeRecibido">
+                    <div class="ContenidoMensajeIzq">
+                        <!-- ICONO: Usuario azul círculo (40x40) -->
+                        <img class="IconoUsuarioIzq" src="../Recursos/Iconos/Head/usuario.svg" alt="Usuario">
+                        <div class="BurbujaMensajeRecibido">
+                            <p>¡Hola! Sergio, ¿tienes alguna pregunta?.</p>
+                        </div>
+                    </div>
+                    <span class="HoraMensajeIzq">10:15</span>
+                </div>
+
+                <!-- Mensaje enviado 2 -->
+                <div class="MensajeEnviado">
+                    <span class="HoraMensajeDer">10:15</span>
+                    <div class="ContenidoMensajeDer">
+                        <div class="BurbujaMensajeEnviado">
+                            <p>Sí tengo una duda con respecto a la recolección, ya que tengo mucho material para reciclar.</p>
+                        </div>
+                        <!-- ICONO: Usuario verde círculo (40x40) -->
+                        <img class="IconoUsuarioDer" src="../Recursos/Iconos/Head/usuario.svg" alt="Tú">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra de input -->
+            <div class="BarraInput">
+                <input type="text" class="InputMensaje" placeholder="Escribe tu mensaje!">
+                <button class="BotonEnviar">
+                    <!-- ICONO: Avión de papel verde (24x24) -->
+                    <img src="../Recursos/Iconos/Head/enviar.svg" alt="Enviar">
+                </button>
+            </div>
+        </div>
     </main>
+
+
 </body>
 </html>

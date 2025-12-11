@@ -1,0 +1,272 @@
+﻿/* Contenedor principal del chat */
+.ContenedorChat {
+    max-width: 900px;
+    margin: 0 auto;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    background: #d4f1d4;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+/* ========== BOTÓN VOLVER ========== */
+.BotonVolverChat {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+    /* LÍNEA 30: Color del icono de casa en botón volver (verde) */
+    .BotonVolverChat img {
+        width: 20px;
+        height: 20px;
+        color: #2e7d32;
+    }
+
+    .BotonVolverChat:hover {
+        background-color: #f1f8f4;
+        transform: translateY(-2px);
+    }
+
+/* ========== ÁREA DE MENSAJES ========== */
+.AreaMensajes {
+    flex: 1;
+    overflow-y: auto;
+    padding: 60px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+    /* Scroll personalizado */
+    .AreaMensajes::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .AreaMensajes::-webkit-scrollbar-track {
+        background: rgba(46,125,50,0.1);
+        border-radius: 10px;
+    }
+
+    .AreaMensajes::-webkit-scrollbar-thumb {
+        background: #2e7d32;
+        border-radius: 10px;
+    }
+
+/* ========== MENSAJES RECIBIDOS ========== */
+.MensajeRecibido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.ContenidoMensajeIzq {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* LÍNEA 80: Color del icono de usuario izquierdo (azul) */
+.IconoUsuarioIzq {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e3f2fd;
+    padding: 8px;
+    color: #1976d2;
+    flex-shrink: 0;
+}
+
+.BurbujaMensajeRecibido {
+    background: white;
+    border: 1px solid #424242;
+    border-radius: 20px;
+    padding: 12px 18px;
+    max-width: 500px;
+}
+
+    .BurbujaMensajeRecibido p {
+        font-family: Poppins, sans-serif;
+        font-size: 14px;
+        color: #424242;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+.HoraMensajeIzq {
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    color: #616161;
+    margin-left: 50px;
+}
+
+/* ========== MENSAJES ENVIADOS ========== */
+.MensajeEnviado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.ContenidoMensajeDer {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.BurbujaMensajeEnviado {
+    background: #2e7d32;
+    border-radius: 20px;
+    padding: 12px 18px;
+    max-width: 500px;
+}
+
+    .BurbujaMensajeEnviado p {
+        font-family: Poppins, sans-serif;
+        font-size: 14px;
+        color: white;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+/* LÍNEA 149: Color del icono de usuario derecho (verde) */
+.IconoUsuarioDer {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #c8e6c9;
+    padding: 8px;
+    color: #1b5e20;
+    flex-shrink: 0;
+}
+
+.HoraMensajeDer {
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    color: #616161;
+    margin-right: 50px;
+}
+
+/* ========== BARRA DE INPUT ========== */
+.BarraInput {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    border: 2px solid #2e7d32;
+    border-radius: 30px;
+    padding: 8px 12px;
+    margin-top: 16px;
+}
+
+.InputMensaje {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #424242;
+    padding: 8px 12px;
+}
+
+    .InputMensaje::placeholder {
+        color: #9e9e9e;
+    }
+
+.BotonEnviar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2e7d32;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+    /* LÍNEA 210: Color del icono de enviar (blanco) */
+    .BotonEnviar img {
+        width: 24px;
+        height: 24px;
+        color: white;
+        filter: brightness(0) invert(1);
+    }
+
+    .BotonEnviar:hover {
+        background-color: #00cc44;
+        transform: scale(1.05);
+    }
+
+    .BotonEnviar:active {
+        transform: scale(0.95);
+    }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .ContenedorChat {
+        border-radius: 0;
+        height: calc(100vh - 60px);
+        margin: 0;
+    }
+
+    .BurbujaMensajeRecibido,
+    .BurbujaMensajeEnviado {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .ContenedorChat {
+        padding: 15px;
+    }
+
+    .AreaMensajes {
+        padding: 50px 10px 10px 10px;
+    }
+
+    .BotonVolverChat {
+        top: 15px;
+        right: 15px;
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+
+    .IconoUsuarioIzq,
+    .IconoUsuarioDer {
+        width: 35px;
+        height: 35px;
+        filter: invert(29%) sepia(45%) saturate(1450%) hue-rotate(90deg) brightness(90%);
+    }
+
+    .BurbujaMensajeRecibido,
+    .BurbujaMensajeEnviado {
+        max-width: 80%;
+        font-size: 13px;
+    }
+
+    .HoraMensajeIzq {
+        margin-left: 45px;
+    }
+
+    .HoraMensajeDer {
+        margin-right: 45px;
+    }
+}

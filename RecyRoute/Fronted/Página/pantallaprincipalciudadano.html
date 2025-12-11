@@ -14,8 +14,12 @@
 
     <!-- CSS del Header Usuario - DEBE IR AL FINAL -->
     <link rel="stylesheet" href="../Recursos/Css/Global/encabezadousuario.css" />
+
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/pantallaprincipalciudadano.css"/>
+
 </head>
 <body>
+
     <header class="EncabezadoPrincipal">
         <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
         <div class="ContenedorIconos">
@@ -26,10 +30,73 @@
         </div>
     </header>
 
-
-
     <main>
-        <!-- Contenido principal -->
+
+        <div class="ContenedorPrincipal">
+            <!-- Banner Superior: Nueva solicitud -->
+            <div class="SeccionIzquierda">
+                <div class="TarjetaNuevaSolicitud">
+                    <img class="IconoReciclaje" src="../Recursos/Iconos/Head/iconoreciclaje.svg" alt="IconoReciclaje">
+                    <div class="ContenedorTexto">
+                        <h2 class="TituloSeccion">¿Listo para reciclar?</h2>
+                        <p class="SubtituloSeccion">Solicita la recolección de tus materiales reciclables</p>
+                    </div>
+                    <button class="btn BotonNuevaSolicitud" onclick="location.href='solicitudrecoleccion.html'">
+                        <span class="IconoMas">+</span>
+                        Nueva Solicitud de Recolección
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sección derecha: Solicitudes actuales e historial -->
+            <div class="SeccionDerecha">
+                <!-- Mis Solicitudes Actuales -->
+                <div class="TarjetaSolicitudesActuales">
+                    <h2 class="TituloTarjeta">Mis Solicitudes Actuales</h2>
+
+                    <div class="PestañasSolicitudes">
+                        <button class="PestañaActiva">Aceptada</button>
+                        <button class="Pestaña" onclick="location.href='detallesolicitud.html'">Detalle de solicitud</button>
+                    </div>
+
+                    <div class="DetallesSolicitud">
+                        <div class="FechaHora">
+                            <img class="IconoCalendario" src="../Recursos/Iconos/Head/calendario.svg" alt="Calendario">
+                            <span>25 Sep 2024</span>
+                            <span>  14:00 - 16:00</span>
+                        </div>
+
+                        <div class="MaterialesReciclables">
+                            <img class="IconoMaterial" src="../Recursos/Iconos/Head/caja.svg" alt="Material">
+                            <span class="EtiquetaMaterial">Papel</span>
+                            <span class="EtiquetaMaterial">Cartón</span>
+                            <span class="EtiquetaMaterial">Plástico</span>
+                        </div>
+
+                        <div class="InfoGestor">
+                            <img class="IconoGestor" src="../Recursos/Iconos/Head/usuario.svg" alt="Gestor">
+                            <span class="TextoGestor">Gestor</span>
+                            <button class="BotonChat" onclick="location.href='chat.html'">
+                                <span>Chat</span>
+                                <img class="IconoChat" src="../Recursos/Iconos/Head/mensaje.svg" alt="Chat">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historial de Recolecciones -->
+                <div class="TarjetaHistorial">
+                    <div class="EncabezadoHistorial">
+
+                        <h2 class="TituloTarjeta">Historial de Recolecciones</h2>
+                    </div>
+                    <button class="btn BotonVerHistorial" onclick="location.href='historial.html'">
+                        Ver historial completo
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </main>
 </body>
 </html>

@@ -1,0 +1,382 @@
+﻿/* Contenedor principal */
+.ContenedorDetalle {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Cabecera con título y botones */
+.CabeceraDetalle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.TituloConIcono {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.IconoCalendario {
+    width: 40px;
+    height: 40px;
+    filter: invert(32%) sepia(53%) saturate(1447%) hue-rotate(88deg) brightness(91%) contrast(88%);
+}
+
+.TituloPrincipal {
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+}
+
+.BotonesAccion {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.BotonHistorial,
+.BotonVolver {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+    .BotonHistorial img,
+    .BotonVolver img {
+        width: 20px;
+        height: 20px;
+    }
+
+.BotonHistorial {
+    background-color: white;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+}
+
+    .BotonHistorial svg {
+        color: #2e7d32;
+    }
+
+    .BotonHistorial:hover {
+        background-color: #f1f8f4;
+        transform: translateY(-2px);
+    }
+
+.BotonVolver {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(46,125,50,0.2);
+}
+
+    .BotonVolver img {
+        filter: brightness(0) invert(1);
+    }
+
+    .BotonVolver:hover {
+        background-color: #00cc44;
+        transform: translateY(-2px);
+    }
+
+/* Descripción */
+.DescripcionPagina {
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    color: #424242;
+    margin-bottom: 24px;
+}
+
+/* Tarjeta principal */
+.TarjetaSolicitud {
+    background: #c8e6c9;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 20px 60px rgba(16,185,129,0.06), 0 8px 20px rgba(5,150,105,0.04);
+    border: 1px solid rgba(16,185,129,0.05);
+}
+
+/* Encabezado de tarjeta */
+.EncabezadoTarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(46,125,50,0.15);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.NumeroSolicitud {
+    font-family: Poppins, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+}
+
+.InfoCreacion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.TextoCreacion {
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    color: #616161;
+}
+
+/* Contenido en dos columnas */
+.ContenidoTarjeta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* Columna izquierda */
+.ColumnaIzquierda {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Estado */
+.FilaEstado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.EtiquetaEstado {
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #424242;
+}
+
+.BadgeEstado {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+    .BadgeEstado.Aceptada {
+        background-color: #e8f5e9;
+        color: #2e7d32;
+    }
+
+    .BadgeEstado.Pendiente {
+        background-color: #fff3e0;
+        color: #f57c00;
+    }
+
+    .BadgeEstado.Rechazada {
+        background-color: #ffebee;
+        color: #c62828;
+    }
+
+/* Filas de detalle */
+.FilaDetalle {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.IconoDetalle {
+    flex-shrink: 0;
+    margin-top: 2px;
+    width: 20px;
+    height: 20px;
+    color: #2e7d32;
+}
+
+.TextoDetalle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.EtiquetaInfo {
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.ValorInfo {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #424242;
+    line-height: 1.5;
+}
+
+/* Columna derecha */
+.ColumnaDerecha {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Tarjeta del gestor */
+.TarjetaGestor {
+    background: white;
+    padding: 18px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.TituloGestor {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+}
+
+.InfoGestor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.IconoGestor {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #2e7d32;
+}
+
+.NombreGestor {
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #424242;
+}
+
+.ContactoGestor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.IconoTelefono {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    color: #2e7d32;
+}
+
+.NumeroTelefono {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+/* Tarjeta de observaciones */
+.TarjetaObservaciones {
+    background: white;
+    padding: 18px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.TituloConIconoObs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.IconoObservaciones {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: #2e7d32;
+}
+
+.TituloObservaciones {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+}
+
+.TextoObservaciones {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #424242;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .ContenidoTarjeta {
+        grid-template-columns: 1fr;
+    }
+
+    .CabeceraDetalle {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .BotonesAccion {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .TarjetaSolicitud {
+        padding: 20px;
+    }
+
+    .TituloPrincipal {
+        font-size: 22px;
+    }
+
+    .BotonesAccion {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .BotonHistorial,
+    .BotonVolver {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .EncabezadoTarjeta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

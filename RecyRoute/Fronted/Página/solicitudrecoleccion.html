@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RecyRoute</title>
+    <link rel="icon" href="../Recursos/Iconos/Head/logorecyroute.svg" />
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="../Recursos/Css/Global/reset.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/base.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/tipografia.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css" />
+
+
+    <!-- CSS específico de la página -->
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/solicitudrecoleccion.css" />
+
+
+
+    <!-- CSS del Header Usuario - DEBE IR AL FINAL -->
+    <link rel="stylesheet" href="../Recursos/Css/Global/encabezadousuario.css" />
+
+</head>
+<body>
+
+    <header class="EncabezadoPrincipal">
+        <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
+        <div class="ContenedorIconos">
+            <a class="IconoMensaje" href="chat.html"><img src="../Recursos/Iconos/Head/mensaje.svg" alt="IconoMensaje"></a>
+            <a class="IconoNotificacion" href="notificacion.html"><img src="../Recursos/Iconos/Head/notificaciones.svg" alt="IconoNotificacion"></a>
+            <a class="IconoUsuario" href="configuracion.html"><img src="../Recursos/Iconos/Head/usuario.svg" alt="IconoUsuario"></a>
+            <a class="NombreUsuario" href="configuracion.html"><h2>Usuario</h2></a>
+        </div>
+    </header>
+    <main class="ContenedorPrincipal">
+        <div class="TarjetaSolicitudReco">
+            <div class="CabeceraSolicitud">
+                <img class="IconoReciclaje" src="../Recursos/Iconos/Head/iconoreciclaje.svg" alt="IconoReciclaje">
+                <div class="ContenedorTexto">
+                    <h1 class="TituloSeccion">Nueva Solicitud de Recolección</h1>
+                    <p class="SubtituloSeccion">Solicita que un gestor ambiental visite tu hogar para recoger materiales reciclables.</p>
+                </div>
+            </div>
+
+            <form id="formSolicitud" class="FormularioSolicitud" novalidate>
+                <!-- Materiales -->
+                <section class="Seccion">
+                    <label class="EtiquetaSeccion">Selecciona el tipo de materiales que deseas entregar para recolección</label>
+                    <p class="AyudaPequeña">Puedes seleccionar varios materiales.</p>
+                    <div class="ChipsContainer" role="group" aria-label="Materiales reciclables">
+                        <label class="chip">
+                            <input type="checkbox" name="materiales" value="Papel" />
+                            <span>Papel</span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" name="materiales" value="Carton" />
+                            <span>Cartón</span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" name="materiales" value="Plastico" />
+                            <span>Plástico</span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" name="materiales" value="Vidrio" />
+                            <span>Vidrio</span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" name="materiales" value="Metal" />
+                            <span>Metal</span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" name="materiales" value="Electronicos" />
+                            <span>Electrónicos</span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" name="materiales" value="Textil" />
+                            <span>Textil</span>
+                        </label>
+                    </div>
+                    <div id="errorMateriales" class="ErrorMensaje" aria-live="polite"></div>
+                </section>
+
+                <!-- Fecha y Horario -->
+                <section class="Seccion GridSection">
+                    <div class="Campo">
+                        <label class="EtiquetaCampo">Fecha preferida</label>
+                        <div class="InputConIcono">
+                            <img src="../Recursos/Iconos/Head/calendario.svg" alt="" class="IconoInput">
+                            <input id="fechaPreferida" type="date" name="fecha" required>
+                        </div>
+                        <div class="AyudaPequeña">No se puede agendar para el mismo día (mínimo: mañana).</div>
+                    </div>
+
+                    <div class="Campo">
+                        <label class="EtiquetaCampo">Horario preferido</label>
+                        <div class="InputConIcono">
+                            <img src="../Recursos/Iconos/Head/reloj.svg" alt="" class="IconoInput">
+                            <select id="horarioPreferido" name="horario" required>
+                                <option value="" disabled selected>Seleccione un bloque</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contacto y Dirección -->
+                <section class="Seccion GridSection">
+                    <div class="Campo">
+                        <label class="EtiquetaCampo">Teléfono de contacto</label>
+                        <div class="InputConIcono">
+                            <img src="../Recursos/Iconos/Head/telefono.svg" alt="" class="IconoInput">
+                            <input id="telefonoContacto" type="tel" name="telefono" placeholder="+57 300 123 4567" required>
+                        </div>
+                    </div>
+
+                    <div class="Campo">
+                        <label class="EtiquetaCampo">Dirección</label>
+                        <div class="InputConIcono">
+                            <img src="../Recursos/Iconos/Head/direccion.svg" alt="" class="IconoInput">
+                            <input id="direccion" type="text" name="direccion" placeholder="Ej: Carrera 56 # 88-15 Sur" required>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Observaciones -->
+                <section class="Seccion">
+                    <label class="EtiquetaSeccion">Observaciones</label>
+                    <textarea id="observaciones" name="observaciones" rows="5" maxlength="250" placeholder="Información adicional, instrucciones de acceso, referencias..."></textarea>
+                    <div class="ContadorCaracteres"><span id="contChars">0</span>/250</div>
+                </section>
+
+                <!-- Botón enviar -->
+                <div class="AccionFinal">
+                    <button id="btnEnviar" type="submit" class="btn BotonEnviar" onclick="location.href='solicitudenviada.html'">Enviar Solicitud</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        /* -------------------------
+           Lógica JS: fecha mínima, horarios, validación y contador
+           ------------------------- */
+
+        /** Fecha mínima = mañana **/
+        (function setMinDate() {
+            const inputFecha = document.getElementById('fechaPreferida');
+            const mañana = new Date(Date.now() + 24 * 60 * 60 * 1000);
+            const yyyy = mañana.getFullYear();
+            const mm = String(mañana.getMonth() + 1).padStart(2, '0');
+            const dd = String(mañana.getDate()).padStart(2, '0');
+            inputFecha.min = `${yyyy}-${mm}-${dd}`;
+        })();
+
+        /** Rellenar select de horarios con bloques de 30 min desde 08:00 a 17:00 (último bloque 16:30-17:00) **/
+        (function llenarHorarios() {
+            const select = document.getElementById('horarioPreferido');
+            const startHour = 8, endHour = 17;
+            for (let h = startHour; h < endHour; h++) {
+                for (let m = 0; m < 60; m += 30) {
+                    const inicio = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+                    const finDate = new Date(0, 0, 0, h, m + 30);
+                    const fin = `${String(finDate.getHours()).padStart(2, '0')}:${String(finDate.getMinutes()).padStart(2, '0')}`;
+                    const option = document.createElement('option');
+                    option.value = `${inicio}-${fin}`;
+                    option.textContent = `${inicio} - ${fin}`;
+                    select.appendChild(option);
+                }
+            }
+        })();
+
+        /** Contador de caracteres **/
+        (function contadorObservaciones() {
+            const ta = document.getElementById('observaciones');
+            const contador = document.getElementById('contChars');
+            ta.addEventListener('input', () => {
+                contador.textContent = ta.value.length;
+                validarFormulario();
+            });
+        })();
+
+        /** Validación mínima del formulario para habilitar el botón enviar **/
+        const form = document.getElementById('formSolicitud');
+        const btnEnviar = document.getElementById('btnEnviar');
+
+        function materialesSeleccionados() {
+            return Array.from(document.querySelectorAll('input[name="materiales"]:checked')).length;
+        }
+
+        function camposRequeridosValidos() {
+            const fecha = document.getElementById('fechaPreferida').value;
+            const horario = document.getElementById('horarioPreferido').value;
+            const telefono = document.getElementById('telefonoContacto').value.trim();
+            const direccion = document.getElementById('direccion').value.trim();
+            return fecha && horario && telefono && direccion && materialesSeleccionados() > 0;
+        }
+
+        function validarFormulario() {
+            const errorMat = document.getElementById('errorMateriales');
+            if (materialesSeleccionados() === 0) {
+                errorMat.textContent = "Selecciona al menos un material.";
+            } else {
+                errorMat.textContent = "";
+            }
+
+            btnEnviar.disabled = !camposRequeridosValidos();
+        }
+
+        /* listeners para re-evaluar estado del form */
+        document.querySelectorAll('input[name="materiales"]').forEach(ch => ch.addEventListener('change', validarFormulario));
+        document.getElementById('fechaPreferida').addEventListener('change', validarFormulario);
+        document.getElementById('horarioPreferido').addEventListener('change', validarFormulario);
+        document.getElementById('telefonoContacto').addEventListener('input', validarFormulario);
+        document.getElementById('direccion').addEventListener('input', validarFormulario);
+
+        /* Envío: aquí solo evitamos el comportamiento por defecto y mostramos objeto (sustituir por tu lógica API) */
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!camposRequeridosValidos()) return;
+
+            const datos = {
+                materiales: Array.from(document.querySelectorAll('input[name="materiales"]:checked')).map(i => i.value),
+                fecha: document.getElementById('fechaPreferida').value,
+                horario: document.getElementById('horarioPreferido').value,
+                telefono: document.getElementById('telefonoContacto').value.trim(),
+                direccion: document.getElementById('direccion').value.trim(),
+                observaciones: document.getElementById('observaciones').value.trim()
+            };
+
+            // Reemplaza esto por llamada a tu backend (fetch/XHR)
+            console.log('Solicitud enviada:', datos);
+            // Mostrar feedback simple al usuario
+            btnEnviar.textContent = 'Enviando...';
+            btnEnviar.disabled = true;
+
+            //// Simulación de respuesta
+            //setTimeout(() => {
+            //    btnEnviar.textContent = 'Enviar Solicitud';
+            //    alert('Solicitud enviada correctamente.'); // reemplazar con modal o UI propia
+            //    form.reset();
+            //    document.getElementById('contChars').textContent = '0';
+            //    validarFormulario();
+            //}, 800);
+        });
+    </script>
+</body>
+</html>

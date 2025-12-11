@@ -2,9 +2,200 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>RecyRoute</title>
+    <link rel="icon" href="../Recursos/Iconos/Head/logorecyroute.svg" />
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="../Recursos/Css/Global/reset.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/base.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Global/tipografia.css" />
+    <link rel="stylesheet" href="../Recursos/Css/Componentes/botones.css" />
+
+    <link rel="stylesheet" href="../Recursos/Css/Paginas/pantallaprincipalgestor.css" />
+
+    <!-- CSS del Header Usuario - DEBE IR AL FINAL -->
+    <link rel="stylesheet" href="../Recursos/Css/Global/encabezadousuario.css" />
+
+
+
 </head>
+
 <body>
+    <header class="EncabezadoPrincipal">
+        <h1 class="LogoRecyRoute"><a href="index.html">RecyRoute</a></h1>
+        <div class="ContenedorIconos">
+            <a class="IconoMensaje" href="chat.html"><img src="../Recursos/Iconos/Head/mensaje.svg" alt="IconoMensaje"></a>
+            <a class="IconoNotificacion" href="notificacion.html"><img src="../Recursos/Iconos/Head/notificaciones.svg" alt="IconoNotificacion"></a>
+            <a class="IconoUsuario" href="configuracion.html"><img src="../Recursos/Iconos/Head/usuario.svg" alt="IconoUsuario"></a>
+            <a class="NombreUsuario" href="configuracion.html"><h2>Usuario</h2></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="ContenedorPrincipal">
+
+            <!-- Sección Izquierda: Solicitudes Pendientes -->
+            <div class="SeccionIzquierda">
+                <h2 class="TituloSeccion">Solicitudes Pendientes</h2>
+
+                <div class="TarjetaSolicitudesPendientes">
+                    <!-- Solicitud Individual -->
+                    <div class="TarjetaSolicitud">
+                        <div class="EncabezadoSolicitud">
+                            <span class="NumeroSolicitud">Solicitud #01</span>
+                        </div>
+
+                        <div class="DetallesSolicitud">
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/calendario.svg" alt="Fecha">
+                                <span>Fecha: 27/09/2025</span>
+                            </div>
+
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/reloj.svg" alt="Horario">
+                                <span>Horario: 09:00 - 10:00</span>
+                            </div>
+
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/caja.svg" alt="Materiales">
+                                <div class="MaterialesContainer">
+                                    <span>Materiales:</span>
+                                    <div class="EtiquetasMateriales">
+                                        <span class="EtiquetaMaterial">Papel</span>
+                                        <span class="EtiquetaMaterial">Metal</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/direccion.svg" alt="Dirección">
+                                <span>Dirección: Calle 15 # 56 - 98</span>
+                            </div>
+                        </div>
+
+                        <div class="SeccionObservaciones">
+                            <div class="TituloObservaciones">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/mensaje.svg" alt="Observaciones">
+                                <span>Observaciones</span>
+                            </div>
+                            <p class="TextoObservaciones">Voy a entregar varios libros viejos además de papel suelto</p>
+                        </div>
+
+                        <div class="BotonesAccion">
+                            <button class="BotonAceptar" onclick="location.href='gestionsolicitudes.html'">Aceptar</button>
+                            <button class="BotonIgnorar">Ignorar</button>
+                        </div>
+                    </div>
+
+                    <!-- Segunda Solicitud -->
+                    <div class="TarjetaSolicitud">
+                        <div class="EncabezadoSolicitud">
+                            <span class="NumeroSolicitud">Solicitud #01</span>
+                        </div>
+
+                        <div class="DetallesSolicitud">
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/calendario.svg" alt="Fecha">
+                                <span>Fecha: 27/09/2025</span>
+                            </div>
+
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/reloj.svg" alt="Horario">
+                                <span>Horario: 09:00 - 10:00</span>
+                            </div>
+
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/caja.svg" alt="Materiales">
+                                <div class="MaterialesContainer">
+                                    <span>Materiales:</span>
+                                    <div class="EtiquetasMateriales">
+                                        <span class="EtiquetaMaterial">Papel</span>
+                                        <span class="EtiquetaMaterial">Metal</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/direccion.svg" alt="Dirección">
+                                <span>Dirección: Calle 15 # 56 - 98</span>
+                            </div>
+                        </div>
+
+                        <div class="SeccionObservaciones">
+                            <div class="TituloObservaciones">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/mensaje.svg" alt="Observaciones">
+                                <span>Observaciones</span>
+                            </div>
+                            <p class="TextoObservaciones">Voy a entregar varios libros viejos además de papel suelto</p>
+                        </div>
+
+                        <div class="BotonesAccion">
+                            <button class="BotonAceptar">Aceptar</button>
+                            <button class="BotonIgnorar">Ignorar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Sección Derecha -->
+            <div class="SeccionDerecha">
+                <h2 class="TituloSeccion">Recolecciones Activas</h2>
+
+                <!-- Recolecciones Activas -->
+                <div class="TarjetaRecoleccionesActivas">
+
+                    <div class="RecoleccionActiva">
+                        <div class="EstadoRecoleccion">
+                            <span class="EtiquetaEstado">En camino</span>
+                        </div>
+
+                        <div class="InfoCiudadano">
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/usuario.svg" alt="Ciudadano">
+                                <span>Sergio Velandia</span>
+                            </div>
+
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/direccion.svg" alt="Ubicación">
+                                <span>Calle 20 #15-30, Barrio Centro</span>
+                            </div>
+
+                            <div class="ItemDetalle">
+                                <img class="IconoDetalle" src="../Recursos/Iconos/Head/reloj.svg" alt="Hora">
+                                <span>Programada: 14:00</span>
+                            </div>
+                        </div>
+
+                        <div class="BotonesRecoleccion">
+                            <button class="BotonObservaciones" onclick="location.href='estadodegestionderecoleccion.html'">Observaciones</button>
+                            <div class="BotonesInferiores">
+                                <button class="BotonChat" onclick="location.href='chat.html'">Chat <img class="IconoBoton" src="../Recursos/Iconos/Head/mensaje.svg" alt="Chat"></button>
+
+                                <button class="BotonCompletar" onclick="location.href='gestioncompletada.html'">Completar</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historial de Recolecciones -->
+                <h2 class="TituloSeccion TituloHistorial">Historial de Recolecciones</h2>
+                <div class="TarjetaHistorial">
+                    <div class="EncabezadoHistorial">
+                    </div>
+                    <button class="BotonVerHistorial" onclick="location.href='historial.html'">
+                        Ver historial completo
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+
+
 
 </body>
 </html>
