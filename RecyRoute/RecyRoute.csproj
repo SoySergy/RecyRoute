@@ -18,6 +18,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="BCrypt.Net-Next" Version="4.1.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.11" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.11" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.11">
@@ -33,6 +34,18 @@
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.2.1" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\index.html" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\iconos\" />
+	  <Folder Include="wwwroot\imagenes\" />
+	  <Folder Include="wwwroot\js\" />
+	  <Folder Include="wwwroot\css\" />
+	  <Folder Include="wwwroot\paginas\" />
 	</ItemGroup>
 
 </Project>
