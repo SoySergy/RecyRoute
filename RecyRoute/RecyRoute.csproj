@@ -9,12 +9,16 @@
 	<ItemGroup>
 		<Compile Remove="Backend\**" />
 		<Compile Remove="Frontend\**" />
+		<Compile Remove="wwwroot\css\Componentes\**" />
 		<Content Remove="Backend\**" />
 		<Content Remove="Frontend\**" />
+		<Content Remove="wwwroot\css\Componentes\**" />
 		<EmbeddedResource Remove="Backend\**" />
 		<EmbeddedResource Remove="Frontend\**" />
+		<EmbeddedResource Remove="wwwroot\css\Componentes\**" />
 		<None Remove="Backend\**" />
 		<None Remove="Frontend\**" />
+		<None Remove="wwwroot\css\Componentes\**" />
 	</ItemGroup>
 
 	<ItemGroup>
